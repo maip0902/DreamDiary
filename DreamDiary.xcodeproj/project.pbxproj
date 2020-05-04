@@ -23,6 +23,7 @@
 		E709FE44246005DF007CE6BA /* BaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E709FE43246005DF007CE6BA /* BaseView.xib */; };
 		E709FE46246016CC007CE6BA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE45246016CC007CE6BA /* RegisterViewController.swift */; };
 		E709FE4824601AE7007CE6BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE4724601AE7007CE6BA /* LoginViewController.swift */; };
+		E709FE4A24605F68007CE6BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE4924605F68007CE6BA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E709FE43246005DF007CE6BA /* BaseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseView.xib; sourceTree = "<group>"; };
 		E709FE45246016CC007CE6BA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E709FE4724601AE7007CE6BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E709FE4924605F68007CE6BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				E709FE11245FEFEE007CE6BA /* Assets.xcassets */,
 				E709FE13245FEFEE007CE6BA /* LaunchScreen.storyboard */,
 				E709FE16245FEFEE007CE6BA /* Info.plist */,
+				E709FE4924605F68007CE6BA /* Constants.swift */,
 			);
 			path = DreamDiary;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				E709FE46246016CC007CE6BA /* RegisterViewController.swift in Sources */,
 				E709FE09245FEFED007CE6BA /* AppDelegate.swift in Sources */,
 				E709FE0B245FEFED007CE6BA /* SceneDelegate.swift in Sources */,
+				E709FE4A24605F68007CE6BA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

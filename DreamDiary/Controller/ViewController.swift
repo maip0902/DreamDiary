@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         print("ok")
+        print(Constants.AUTH_URL)
 //        if let BaseView = Bundle.main.loadNibNamed("BaseView", owner: self, options: nil)?.first as? BaseView {
 //            self.view.addSubview(BaseView)
 //        }
