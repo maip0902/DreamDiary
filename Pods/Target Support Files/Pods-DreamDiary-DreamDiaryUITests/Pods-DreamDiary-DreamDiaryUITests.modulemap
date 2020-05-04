@@ -1,0 +1,6 @@
+framework module Pods_DreamDiary_DreamDiaryUITests {
+  umbrella header "Pods-DreamDiary-DreamDiaryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
