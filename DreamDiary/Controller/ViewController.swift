@@ -13,10 +13,9 @@ class ViewController: UIViewController {
 //    let user = User()
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        print("ok")
-        print(Constants.AUTH_URL)
+        let realm = try! Realm()
+        print(realm.objects(User.self))
 //        if let BaseView = Bundle.main.loadNibNamed("BaseView", owner: self, options: nil)?.first as? BaseView {
 //            self.view.addSubview(BaseView)
 //        }

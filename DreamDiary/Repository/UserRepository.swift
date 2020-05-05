@@ -6,4 +6,8 @@
 //  Copyright © 2020 神田舞. All rights reserved.
 //
 
-import Foundation
+protocol UserRepository {
+    
+    func create(name: String, email: String, password: String) -> User
+    
+}

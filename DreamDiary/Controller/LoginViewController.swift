@@ -7,16 +7,43 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LoginViewController: UIViewController {
 
+    var user: User?
+    @IBOutlet weak var email: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.password.isSecureTextEntry = true
+        if let u = user {
+            email.text = u.name
+            password.text = u.password
+        }
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func login(_ sender: Any) {
+        let email = self.email.text ?? ""
+        let password = self.password.text ?? ""
+        
+        // ログイン処理
+        let creds = SyncCredentials.usernamePassword(username: email, password: password)
+        SyncUser.logIn(with: creds, server: Constants.AUTH_URL, onCompletion: { [weak self](user, err) in
+            if let _ = user {
+                print(SyncUser.current!)
+                self?.performSegue(withIdentifier: "showMain", sender: nil)
+                
+            } else if let error = err {
+                fatalError(error.localizedDescription)
+            }
+            
+        })
+    }
+    
     /*
     // MARK: - Navigation
 

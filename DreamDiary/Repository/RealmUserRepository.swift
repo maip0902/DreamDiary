@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
+struct RealmUserRepository : UserRepository {
+    
+    // 辞書型で渡すべきか悩み中
+    func create(name: String, email: String, password: String) -> User {
+        let db: DB = DBConnect()
+        let user = User()
+        user.name = name
+        user.email = email
+        user.password = password
+        
+        db.save(user)
+        return user
+    }
+}
