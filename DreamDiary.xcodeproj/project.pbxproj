@@ -35,6 +35,10 @@
 		E709FE5D2461288E007CE6BA /* DiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE5C2461288E007CE6BA /* DiaryRepository.swift */; };
 		E709FE632461443C007CE6BA /* DiaryTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */; };
 		E709FE6524614D05007CE6BA /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */; };
+		E709FE68246162AB007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
+		E709FE69246162AC007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
+		E709FE6A246162AC007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
+		E709FE6E24616562007CE6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE6D24616561007CE6BA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,7 @@
 		E709FE5C2461288E007CE6BA /* DiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepository.swift; sourceTree = "<group>"; };
 		E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableTableViewController.swift; sourceTree = "<group>"; };
 		E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		E709FE6D24616561007CE6BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +178,7 @@
 		E709FE07245FEFED007CE6BA /* DreamDiary */ = {
 			isa = PBXGroup;
 			children = (
+				E709FE6D24616561007CE6BA /* GoogleService-Info.plist */,
 				E709FE4D246064C7007CE6BA /* Repository */,
 				E709FE08245FEFED007CE6BA /* AppDelegate.swift */,
 				E709FE3C245FF6EA007CE6BA /* Controller */,
@@ -395,7 +401,9 @@
 				E709FE15245FEFEE007CE6BA /* LaunchScreen.storyboard in Resources */,
 				E709FE12245FEFEE007CE6BA /* Assets.xcassets in Resources */,
 				E709FE10245FEFED007CE6BA /* Main.storyboard in Resources */,
+				E709FE68246162AB007CE6BA /* Info.plist in Resources */,
 				E709FE44246005DF007CE6BA /* BaseView.xib in Resources */,
+				E709FE6E24616562007CE6BA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E709FE69246162AC007CE6BA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E709FE6A246162AC007CE6BA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
