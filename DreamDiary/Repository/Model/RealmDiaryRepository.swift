@@ -19,14 +19,14 @@ struct RealmDiaryRepository: DiaryRepository {
         diary.imitation = imitation
         
         db.save(diary)
-//        self.append(user, diary)
+        self.append(user, diary)
         return diary
     }
     
-//    func append(_ user: User, _ diary: Diary) {
-//        let realm = try! Realm()
-//        try! realm.write {
-//            user.diaries.append(diary)
-//        }
-//    }
+    func append(_ user: User, _ diary: Diary) {
+        let realm = try! Realm()
+        try! realm.write {
+            user.diaries.append(diary)
+        }
+    }
 }

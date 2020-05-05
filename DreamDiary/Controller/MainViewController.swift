@@ -20,6 +20,10 @@ class MainViewController: UIViewController {
         self.performSegue(withIdentifier: "toCreateDiary", sender: nil)
     }
     
+    @IBAction func showList(_ sender: Any) {
+        self.performSegue(withIdentifier: "showList", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

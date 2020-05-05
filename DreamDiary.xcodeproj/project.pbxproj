@@ -33,6 +33,7 @@
 		E709FE59246126DF007CE6BA /* DBConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE58246126DF007CE6BA /* DBConnect.swift */; };
 		E709FE5B24612818007CE6BA /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE5A24612818007CE6BA /* DB.swift */; };
 		E709FE5D2461288E007CE6BA /* DiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE5C2461288E007CE6BA /* DiaryRepository.swift */; };
+		E709FE632461443C007CE6BA /* DiaryTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		E709FE58246126DF007CE6BA /* DBConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBConnect.swift; sourceTree = "<group>"; };
 		E709FE5A24612818007CE6BA /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		E709FE5C2461288E007CE6BA /* DiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepository.swift; sourceTree = "<group>"; };
+		E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				E709FE522461216D007CE6BA /* DiaryViewController.swift */,
+				E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E709FE632461443C007CE6BA /* DiaryTableTableViewController.swift in Sources */,
 				E709FE4824601AE7007CE6BA /* LoginViewController.swift in Sources */,
 				E709FE5D2461288E007CE6BA /* DiaryRepository.swift in Sources */,
 				E709FE5124611EA8007CE6BA /* MainViewController.swift in Sources */,

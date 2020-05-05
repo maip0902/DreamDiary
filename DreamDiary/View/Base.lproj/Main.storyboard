@@ -223,6 +223,15 @@
                                     <action selector="toCreate:" destination="HeA-Fe-lAN" eventType="touchUpInside" id="U1X-gi-Rwg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxq-so-wLy">
+                                <rect key="frame" x="121" y="309" width="130" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="日記一覧"/>
+                                <connections>
+                                    <action selector="showList:" destination="HeA-Fe-lAN" eventType="touchUpInside" id="Lon-Sc-RDz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gKf-eT-QcD"/>
@@ -230,11 +239,41 @@
                     <navigationItem key="navigationItem" title="メイン" id="X3u-FC-NFw"/>
                     <connections>
                         <segue destination="3od-sJ-X5z" kind="show" identifier="toCreateDiary" id="hI3-eh-YUr"/>
+                        <segue destination="Jhq-gk-6Td" kind="show" identifier="showList" id="Xqu-3T-dSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdI-K1-gbk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2335" y="783"/>
+        </scene>
+        <!--Diary Table Table View Controller-->
+        <scene sceneID="Ss5-Vx-iO3">
+            <objects>
+                <tableViewController id="Jhq-gk-6Td" customClass="DiaryTableTableViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IVa-g8-NUc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Uk8-nk-YSg">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uk8-nk-YSg" id="vKa-pX-IzT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jhq-gk-6Td" id="fx0-aZ-CGb"/>
+                            <outlet property="delegate" destination="Jhq-gk-6Td" id="dSd-Yn-yXh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7Oj-NT-tqH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPh-3o-hPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2683" y="1542"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="lMb-YZ-LrT">
@@ -304,14 +343,16 @@
                         <outlet property="body" destination="WzE-AL-j98" id="C2s-b2-oZA"/>
                         <outlet property="date" destination="bED-nc-2RD" id="02h-e7-Tu3"/>
                         <outlet property="imitation" destination="alt-0F-3Bl" id="aZ8-e8-7rq"/>
+                        <segue destination="Jhq-gk-6Td" kind="show" id="qsB-pO-p0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfT-S9-64P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3150.7246376811595" y="782.8125"/>
+            <point key="canvasLocation" x="3484" y="853"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Xqu-3T-dSV"/>
         <segue reference="9eX-U1-sKE"/>
     </inferredMetricsTieBreakers>
 </document>
