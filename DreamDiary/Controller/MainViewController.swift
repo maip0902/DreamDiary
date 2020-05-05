@@ -16,7 +16,10 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func toCreate(_ sender: Any) {
+        self.performSegue(withIdentifier: "toCreateDiary", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

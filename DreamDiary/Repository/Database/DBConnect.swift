@@ -16,4 +16,11 @@ struct DBConnect: DB {
             realm.add(object)
         }
     }
+    
+//    func append(user: User, diary: Diary) {
+//        let realm = try! Realm()
+//        try! realm.write {
+//            user.diaries.append(diary)
+//        }
+//    }
 }

@@ -220,7 +220,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="新規作成"/>
                                 <connections>
-                                    <segue destination="3od-sJ-X5z" kind="show" id="pys-ib-gYQ"/>
+                                    <action selector="toCreate:" destination="HeA-Fe-lAN" eventType="touchUpInside" id="U1X-gi-Rwg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -228,6 +228,9 @@
                         <viewLayoutGuide key="safeArea" id="gKf-eT-QcD"/>
                     </view>
                     <navigationItem key="navigationItem" title="メイン" id="X3u-FC-NFw"/>
+                    <connections>
+                        <segue destination="3od-sJ-X5z" kind="show" identifier="toCreateDiary" id="hI3-eh-YUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdI-K1-gbk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,10 +244,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="f2w-5j-x0A">
-                                <rect key="frame" x="78" y="167" width="258" height="66"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-Z4-Vcl">
                                 <rect key="frame" x="164" y="138" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -253,7 +252,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WzE-AL-j98">
-                                <rect key="frame" x="44" y="292" width="309" height="276"/>
+                                <rect key="frame" x="44" y="292" width="309" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -268,20 +267,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="意味" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-MP-rmQ">
-                                <rect key="frame" x="190" y="576" width="35" height="21"/>
+                                <rect key="frame" x="161" y="407" width="92" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bED-nc-2RD">
+                                <rect key="frame" x="44" y="184" width="322" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="alt-0F-3Bl">
-                                <rect key="frame" x="87" y="634" width="240" height="128"/>
+                                <rect key="frame" x="95" y="460" width="173" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8G-un-AUp">
+                                <rect key="frame" x="128" y="544" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="作成"/>
+                                <connections>
+                                    <action selector="create:" destination="3od-sJ-X5z" eventType="touchUpInside" id="h2b-AH-pnH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="55X-YH-3O7"/>
@@ -289,8 +302,7 @@
                     <navigationItem key="navigationItem" id="i6a-dP-Fli"/>
                     <connections>
                         <outlet property="body" destination="WzE-AL-j98" id="C2s-b2-oZA"/>
-                        <outlet property="date" destination="f2w-5j-x0A" id="scg-4e-U2g"/>
-                        <outlet property="description" destination="alt-0F-3Bl" id="Xth-DD-zrc"/>
+                        <outlet property="date" destination="bED-nc-2RD" id="02h-e7-Tu3"/>
                         <outlet property="imitation" destination="alt-0F-3Bl" id="aZ8-e8-7rq"/>
                     </connections>
                 </viewController>

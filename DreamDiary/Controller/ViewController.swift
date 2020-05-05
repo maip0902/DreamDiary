@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let realm = try! Realm()
         print(realm.objects(User.self))
+        print(realm.objects(Diary.self))
 //        if let BaseView = Bundle.main.loadNibNamed("BaseView", owner: self, options: nil)?.first as? BaseView {
 //            self.view.addSubview(BaseView)
 //        }

@@ -20,5 +20,5 @@ class Diary: Object {
         return "diaryId"
     }
     
-    @objc dynamic var user = LinkingObjects(fromType: User.self, propaty: "diaries")
+//    var authors = LinkingObjects(fromType: User.self, property: "diaries")
 }

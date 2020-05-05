@@ -8,5 +8,4 @@
 
 import Foundation
 protocol DB {
-    func save(_ object: Object)
 }

@@ -223,11 +223,10 @@
 		E709FE3C245FF6EA007CE6BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E709FE5F246129AB007CE6BA /* Diary */,
+				E709FE5E24612994007CE6BA /* Auth */,
 				E709FE0C245FEFED007CE6BA /* ViewController.swift */,
-				E709FE45246016CC007CE6BA /* RegisterViewController.swift */,
-				E709FE4724601AE7007CE6BA /* LoginViewController.swift */,
 				E709FE5024611EA8007CE6BA /* MainViewController.swift */,
-				E709FE522461216D007CE6BA /* DiaryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,14 +234,47 @@
 		E709FE4D246064C7007CE6BA /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				E709FE4B246064C0007CE6BA /* UserRepository.swift */,
-				E709FE4E246064E8007CE6BA /* RealmUserRepository.swift */,
-				E709FE5624612566007CE6BA /* RealmDiaryRepository.swift */,
-				E709FE58246126DF007CE6BA /* DBConnect.swift */,
-				E709FE5A24612818007CE6BA /* DB.swift */,
-				E709FE5C2461288E007CE6BA /* DiaryRepository.swift */,
+				E709FE6124612F47007CE6BA /* Database */,
+				E709FE6024612F27007CE6BA /* Model */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		E709FE5E24612994007CE6BA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E709FE45246016CC007CE6BA /* RegisterViewController.swift */,
+				E709FE4724601AE7007CE6BA /* LoginViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E709FE5F246129AB007CE6BA /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				E709FE522461216D007CE6BA /* DiaryViewController.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		E709FE6024612F27007CE6BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E709FE5C2461288E007CE6BA /* DiaryRepository.swift */,
+				E709FE5624612566007CE6BA /* RealmDiaryRepository.swift */,
+				E709FE4E246064E8007CE6BA /* RealmUserRepository.swift */,
+				E709FE4B246064C0007CE6BA /* UserRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E709FE6124612F47007CE6BA /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				E709FE5A24612818007CE6BA /* DB.swift */,
+				E709FE58246126DF007CE6BA /* DBConnect.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
