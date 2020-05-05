@@ -51,6 +51,21 @@ class DiaryTableTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let realm = try! Realm()
+        let user = realm.objects(User.self).filter("userId = '3F96844E-2096-401F-98B7-3CA01E457C18'")[0]
+        let diary = user.diaries[indexPath.row]
+        self.performSegue(withIdentifier: "showDetail", sender: diary)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let next = segue.destination as! DiaryDetailViewController
+            next.diary = sender as! Diary
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="2335" y="783"/>
         </scene>
-        <!--Diary Table Table View Controller-->
+        <!--一覧-->
         <scene sceneID="Ss5-Vx-iO3">
             <objects>
                 <tableViewController id="Jhq-gk-6Td" customClass="DiaryTableTableViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -269,11 +269,42 @@
                             <outlet property="delegate" destination="Jhq-gk-6Td" id="dSd-Yn-yXh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7Oj-NT-tqH"/>
+                    <navigationItem key="navigationItem" title="一覧" id="7Oj-NT-tqH"/>
+                    <connections>
+                        <segue destination="Alm-29-M9d" kind="show" identifier="showDetail" id="gO3-1I-xzw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPh-3o-hPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2683" y="1542"/>
+        </scene>
+        <!--Diary Detail View Controller-->
+        <scene sceneID="bix-8l-6vb">
+            <objects>
+                <viewController id="Alm-29-M9d" customClass="DiaryDetailViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Sc-Vf-Lb3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-N9-5LR">
+                                <rect key="frame" x="186" y="205" width="58" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="38F-gH-YzF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k5O-cJ-nep"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="YUW-N9-5LR" id="UoJ-CY-VTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKt-FQ-7So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3552.1739130434785" y="1542.8571428571429"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="lMb-YZ-LrT">

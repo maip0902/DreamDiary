@@ -34,6 +34,7 @@
 		E709FE5B24612818007CE6BA /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE5A24612818007CE6BA /* DB.swift */; };
 		E709FE5D2461288E007CE6BA /* DiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE5C2461288E007CE6BA /* DiaryRepository.swift */; };
 		E709FE632461443C007CE6BA /* DiaryTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */; };
+		E709FE6524614D05007CE6BA /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		E709FE5A24612818007CE6BA /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		E709FE5C2461288E007CE6BA /* DiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepository.swift; sourceTree = "<group>"; };
 		E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableTableViewController.swift; sourceTree = "<group>"; };
+		E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			children = (
 				E709FE522461216D007CE6BA /* DiaryViewController.swift */,
 				E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */,
+				E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				E709FE5B24612818007CE6BA /* DB.swift in Sources */,
 				E709FE4F246064E8007CE6BA /* RealmUserRepository.swift in Sources */,
 				E709FE42246005CD007CE6BA /* BaseView.swift in Sources */,
+				E709FE6524614D05007CE6BA /* DiaryDetailViewController.swift in Sources */,
 				E709FE46246016CC007CE6BA /* RegisterViewController.swift in Sources */,
 				E709FE09245FEFED007CE6BA /* AppDelegate.swift in Sources */,
 				E709FE0B245FEFED007CE6BA /* SceneDelegate.swift in Sources */,
