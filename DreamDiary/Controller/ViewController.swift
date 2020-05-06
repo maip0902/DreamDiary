@@ -7,7 +7,6 @@ class ViewController: UIViewController {
 let user = RealmUserRepository()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let realm = try! Realm()
     }
 }
 
