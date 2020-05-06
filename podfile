@@ -6,7 +6,13 @@ target 'DreamDiary' do
   use_frameworks!
 
   pod 'RealmSwift'
-  # Pods for DreamDiary
+
+# add pods for desired Firebase products
+# https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'	 
+
+ # Pods for DreamDiary
 
   target 'DreamDiaryTests' do
     inherit! :search_paths
