@@ -4,6 +4,7 @@ import RealmSwift
 class DiaryTableTableViewController: UITableViewController {
 
     var loginUser : User?
+    let db = DBConnect()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,26 +64,32 @@ class DiaryTableTableViewController: UITableViewController {
         }
     }
     
-
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+//        if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            if let u = self.loginUser {
+                let diaries = u.diaries
+                let diary = diaries[indexPath.row]
+                let realm = self.db.connect()
+                
+                try! realm.write {
+                    diaries.remove(at: indexPath.row)
+                }
+                self.db.delete(diary)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+//        } else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.

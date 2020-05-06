@@ -16,6 +16,14 @@ struct RealmDiaryRepository: DiaryRepository {
         return diary
     }
     
+    func findByDiaryId(diaryId: String) -> Diary? {
+        let db = DBConnect()
+        let realm = db.connect()
+        let diary = realm.objects(Diary.self).filter("diaryId == '\(diaryId)'")
+        
+        return diary.count != 0 ? diary[0] : nil
+    }
+    
     func append(_ user: User, _ diary: Diary) {
         let realm = try! Realm()
         try! realm.write {
