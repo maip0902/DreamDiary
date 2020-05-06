@@ -17,15 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Realm
-        let config = Realm.Configuration(
+        var config = Realm.Configuration(
           schemaVersion: 1,
           migrationBlock: { migration, oldSchemaVersion in
             if (oldSchemaVersion < 1) {
             }
           })
+        config.deleteRealmIfMigrationNeeded = true
         Realm.Configuration.defaultConfiguration = config
 
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: config)
         // Firebase
         FirebaseApp.configure()
         return true

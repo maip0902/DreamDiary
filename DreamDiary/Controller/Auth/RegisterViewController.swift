@@ -1,10 +1,3 @@
-//
-//  RegisterViewController.swift
-//  DreamDiary
-//
-//  Created by 神田舞 on 2020/05/04.
-//  Copyright © 2020 神田舞. All rights reserved.
-//
 
 import UIKit
 import FirebaseAuth
@@ -22,7 +15,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 入力非表示モード
+        // パスワードフィールド入力非表示モード
         password.isSecureTextEntry = true
         // Do any additional setup after loading the view.
     }
@@ -34,27 +27,21 @@ class RegisterViewController: UIViewController {
         let password: String = self.password.text ?? ""
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            // バリデーション後でちゃんと書く
+            if email == "" || password == "" {
+                return
+            }
           // [START_EXCLUDE]
-            guard let user = authResult?.user, error == nil else {
+            guard let newUser = authResult?.user, error == nil else {
+                // TODO::エラーメッセージ表示
               return
             }
-            print("\(user.email!) created")
+            let createdUser = self.user.create(loginId: newUser.uid, name: name)
+            self.performSegue(withIdentifier: "loginAfterRegister", sender: nil)
           }
           // [END_EXCLUDE]
-        
-        let createdUser = user.create(name: name, email: email, password: password)
-        
-        self.performSegue(withIdentifier: "loginAfterRegister", sender: createdUser)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "loginAfterRegister" {
-            let next = segue.destination as! LoginViewController
-            next.user = sender as! User
-        }
-    }
-    
-
     /*
     // MARK: - Navigation
 

@@ -1,18 +1,22 @@
-//
-//  MainViewController.swift
-//  DreamDiary
-//
-//  Created by 神田舞 on 2020/05/05.
-//  Copyright © 2020 神田舞. All rights reserved.
-//
-
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController {
 
+    let user = RealmUserRepository()
+    
+    @IBOutlet weak var loginLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let firebaseUser = Auth.auth().currentUser {
+            if let u = user.findByLoginId(loginId: firebaseUser.uid) {
+                print(u)
+                let displayName = u.name
+                loginLabel.text = "\(displayName)さんのページ"
+            }
+        }
         // Do any additional setup after loading the view.
     }
     

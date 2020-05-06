@@ -1,17 +1,10 @@
-//
-//  LoginViewController.swift
-//  DreamDiary
-//
-//  Created by 神田舞 on 2020/05/04.
-//  Copyright © 2020 神田舞. All rights reserved.
-//
 
 import UIKit
 import RealmSwift
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
-    var user: User?
     @IBOutlet weak var email: UITextField!
     
     @IBOutlet weak var password: UITextField!
@@ -19,10 +12,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.password.isSecureTextEntry = true
-        if let u = user {
-            email.text = u.name
-            password.text = u.password
-        }
         // Do any additional setup after loading the view.
     }
     
@@ -31,17 +20,14 @@ class LoginViewController: UIViewController {
         let password = self.password.text ?? ""
         
         // ログイン処理
-        let creds = SyncCredentials.usernamePassword(username: email, password: password)
-        SyncUser.logIn(with: creds, server: Constants.AUTH_URL, onCompletion: { [weak self](user, err) in
-            if let _ = user {
-                print(SyncUser.current!)
-                self?.performSegue(withIdentifier: "showMain", sender: nil)
-                
-            } else if let error = err {
-                fatalError(error.localizedDescription)
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+          // [START_EXCLUDE]
+            if let error = error {
+              return
             }
-            
-        })
+            self?.performSegue(withIdentifier: "showMain", sender: nil)
+        }
+          // [END_EXCLUDE]
     }
     
     /*

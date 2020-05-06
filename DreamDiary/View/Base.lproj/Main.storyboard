@@ -215,7 +215,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-el-uf1">
-                                <rect key="frame" x="141" y="403" width="118" height="47"/>
+                                <rect key="frame" x="154" y="499" width="118" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="新規作成"/>
@@ -224,7 +224,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxq-so-wLy">
-                                <rect key="frame" x="121" y="309" width="130" height="51"/>
+                                <rect key="frame" x="148" y="329" width="130" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="日記一覧"/>
@@ -232,19 +232,27 @@
                                     <action selector="showList:" destination="HeA-Fe-lAN" eventType="touchUpInside" id="Lon-Sc-RDz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲストさんのページ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-Do-mOg">
+                                <rect key="frame" x="129" y="122" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gKf-eT-QcD"/>
                     </view>
                     <navigationItem key="navigationItem" title="メイン" id="X3u-FC-NFw"/>
                     <connections>
+                        <outlet property="loginLabel" destination="Dwt-Do-mOg" id="K61-Cf-Yb0"/>
                         <segue destination="3od-sJ-X5z" kind="show" identifier="toCreateDiary" id="hI3-eh-YUr"/>
                         <segue destination="Jhq-gk-6Td" kind="show" identifier="showList" id="Xqu-3T-dSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdI-K1-gbk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="783"/>
+            <point key="canvasLocation" x="2334.7826086956525" y="782.8125"/>
         </scene>
         <!--一覧-->
         <scene sceneID="Ss5-Vx-iO3">
