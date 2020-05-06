@@ -10,6 +10,7 @@ struct RealmUserRepository : UserRepository {
         user.loginId = loginId
         user.name = name
         db.save(user)
+        
         return user
     }
     
@@ -17,7 +18,7 @@ struct RealmUserRepository : UserRepository {
         let db = DBConnect()
         let realm = db.connect()
         let user =  realm.objects(User.self).filter("loginId == '\(loginId)'")
-        print(user)
+
         // 見つからなければnilを返す
         return user.count != 0 ? user[0] : nil
     }

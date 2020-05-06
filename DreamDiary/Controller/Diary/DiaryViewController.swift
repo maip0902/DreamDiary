@@ -16,6 +16,8 @@ class DiaryViewController: UIViewController {
     
     var diary = RealmDiaryRepository()
     
+    var loginUser: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.datePickerMode = UIDatePicker.Mode.date
@@ -48,15 +50,16 @@ class DiaryViewController: UIViewController {
     }
     
     @IBAction func create(_ sender: Any) {
-        let realm = try! Realm()
-        let user = realm.objects(User.self).filter("userId = '3F96844E-2096-401F-98B7-3CA01E457C18'")[0]
-        print(user.diaries)
         let body = self.body.text ?? ""
         let imitation = self.imitation.text ?? ""
         let date = self.date.text ?? ""
         
-        let createdDiary = diary.create(date: date, body: body, imitation: imitation, user: user)
-        print(createdDiary)
+        if let u = self.loginUser {
+
+            let createdDiary = diary.create(date: date, body: body, imitation: imitation, user: u)
+            
+        }
+        
     }
     
     

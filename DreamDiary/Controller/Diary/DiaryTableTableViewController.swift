@@ -3,9 +3,10 @@ import UIKit
 import RealmSwift
 class DiaryTableTableViewController: UITableViewController {
 
+    var loginUser : User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ok")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,34 +23,37 @@ class DiaryTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        let realm = try! Realm()
-        let user = realm.objects(User.self).filter("userId = '3F96844E-2096-401F-98B7-3CA01E457C18'")[0]
-        let diaries = user.diaries
-        print(diaries)
-        return diaries.count
+        if let u = self.loginUser {
+            let diaries = u.diaries
+            
+            return diaries.count
+        } else {
+            
+            return 0
+        }
+        
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        let realm = try! Realm()
-        let user = realm.objects(User.self).filter("userId = '3F96844E-2096-401F-98B7-3CA01E457C18'")[0]
-        let diary = user.diaries[indexPath.row]
-        cell.textLabel?.text = diary.date
-        cell.textLabel?.textColor = UIColor.orange
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
-        // Configure the cell...
-
+        if let u = self.loginUser {
+            let diary = u.diaries[indexPath.row]
+            cell.textLabel?.text = diary.date
+            cell.textLabel?.textColor = UIColor.orange
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
+        }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let u = self.loginUser {
+            let diary = u.diaries[indexPath.row]
+            self.performSegue(withIdentifier: "showDetail", sender: diary)
+        }
     
-        let realm = try! Realm()
-        let user = realm.objects(User.self).filter("userId = '3F96844E-2096-401F-98B7-3CA01E457C18'")[0]
-        let diary = user.diaries[indexPath.row]
-        self.performSegue(withIdentifier: "showDetail", sender: diary)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
