@@ -10,6 +10,7 @@
 		5BF17B40F7E2B060C900A352 /* Pods_DreamDiary_DreamDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8117C90B599A6CE676FB72 /* Pods_DreamDiary_DreamDiaryUITests.framework */; };
 		671C0F3743E2ECE49D452C45 /* Pods_DreamDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691BEC24D921A331EAF0FAE6 /* Pods_DreamDiary.framework */; };
 		91977298FF18287A47B8E8AD /* Pods_DreamDiaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79243D137AD57570597F7B3B /* Pods_DreamDiaryTests.framework */; };
+		E7088A662463111D003E6393 /* passwordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A652463111D003E6393 /* passwordResetViewController.swift */; };
 		E709FE09245FEFED007CE6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE08245FEFED007CE6BA /* AppDelegate.swift */; };
 		E709FE0B245FEFED007CE6BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE0A245FEFED007CE6BA /* SceneDelegate.swift */; };
 		E709FE0D245FEFED007CE6BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE0C245FEFED007CE6BA /* ViewController.swift */; };
@@ -68,6 +69,7 @@
 		A6266E52DD6B72D3131F629C /* Pods-DreamDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryTests.debug.xcconfig"; path = "Target Support Files/Pods-DreamDiaryTests/Pods-DreamDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A14A26315D36FD1C169DF2 /* Pods-DreamDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiary.release.xcconfig"; path = "Target Support Files/Pods-DreamDiary/Pods-DreamDiary.release.xcconfig"; sourceTree = "<group>"; };
 		D6E1C95CAE9335D203AE4040 /* Pods-DreamDiary-DreamDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiary-DreamDiaryUITests.release.xcconfig"; path = "Target Support Files/Pods-DreamDiary-DreamDiaryUITests/Pods-DreamDiary-DreamDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E7088A652463111D003E6393 /* passwordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordResetViewController.swift; sourceTree = "<group>"; };
 		E709FE05245FEFED007CE6BA /* DreamDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E709FE08245FEFED007CE6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E709FE0A245FEFED007CE6BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				E709FE45246016CC007CE6BA /* RegisterViewController.swift */,
 				E709FE4724601AE7007CE6BA /* LoginViewController.swift */,
+				E7088A652463111D003E6393 /* passwordResetViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				E709FE39245FF518007CE6BA /* User.swift in Sources */,
 				E709FE59246126DF007CE6BA /* DBConnect.swift in Sources */,
 				E709FE5524612290007CE6BA /* Diary.swift in Sources */,
+				E7088A662463111D003E6393 /* passwordResetViewController.swift in Sources */,
 				E709FE4C246064C0007CE6BA /* UserRepository.swift in Sources */,
 				E709FE5724612566007CE6BA /* RealmDiaryRepository.swift in Sources */,
 				E709FE532461216D007CE6BA /* DiaryViewController.swift in Sources */,
