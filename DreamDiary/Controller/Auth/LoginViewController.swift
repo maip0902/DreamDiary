@@ -30,6 +30,9 @@ class LoginViewController: UIViewController {
           // [END_EXCLUDE]
     }
     
+    @IBAction func showPasswordReset(_ sender: Any) {
+        self.performSegue(withIdentifier: "toPasswordReset", sender: nil)
+    }
     /*
     // MARK: - Navigation
 
