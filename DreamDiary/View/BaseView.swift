@@ -2,9 +2,6 @@
 import UIKit
 
 class BaseView: UIView {
-
-    @IBOutlet  var SignUpLabel: UIButton!
-    @IBOutlet  var SignInLabel: UIButton!
     
     /*
     // Only override draw() if you perform custom drawing.
