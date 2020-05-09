@@ -9,9 +9,29 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var passwordLabel: UILabel!
+    
+    @IBOutlet weak var forgetoasswordlabel: UIButton!
+    
+    @IBOutlet weak var login: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.password.isSecureTextEntry = true
+        let screenWidth = UIScreen.main.bounds.size.width
+        let screenHeight = UIScreen.main.bounds.size.height
+        let layout = CustomLayout(screenWidth, screenHeight)
+        
+        layout.setFormLabel(emailLabel, passwordLabel)
+        layout.setInputField(email, password)
+        layout.centeringWidth(forgetoasswordlabel,screenHeight*0.6,screenWidth*0.5,screenHeight*0.1)
+        layout.centeringWidth(login, screenHeight*0.55,screenWidth*0.5,screenHeight*0.05)
+        layout.setCorenerRadius(login)
+        layout.setBorderWidth(login)
+        layout.setBorderColor(login)
+        
         // Do any additional setup after loading the view.
     }
     
