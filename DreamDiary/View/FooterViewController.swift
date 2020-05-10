@@ -45,11 +45,18 @@ class FooterViewController: UIViewController {
     }
     
     @objc func list(_ sender: Any) {
-        self.performSegue(withIdentifier: "toShowList", sender: self.loginUser!)
+        let storybord: UIStoryboard = self.storyboard!
+        let nextView = storyboard?.instantiateViewController(withIdentifier: "list") as! DiaryTableTableViewController
+        nextView.loginUser = loginUser!
+        self.navigationController?.pushViewController(nextView, animated: true)
+//        self.performSegue(withIdentifier: "toShowList", sender: self.loginUser!)
     }
     
     @objc func create(_ sender: Any) {
-        self.performSegue(withIdentifier: "toCreate", sender: self.loginUser!)
+        let storybord: UIStoryboard = self.storyboard!
+        let nextView = storyboard?.instantiateViewController(identifier: "create") as! DiaryViewController
+        nextView.loginUser = self.loginUser!
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

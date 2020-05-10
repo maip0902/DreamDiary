@@ -253,6 +253,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dxF-qy-7Le">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdp-8b-m54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1YP-Sj-qnN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uh9-nY-YxO"/>
@@ -265,7 +266,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gz7-vO-Ceu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sdp-8b-m54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="231.8840579710145" y="72.991071428571431"/>
         </scene>
@@ -277,13 +277,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日記数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfO-F0-jiC">
-                                <rect key="frame" x="164" y="213" width="86" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲストさんのページ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-Do-mOg">
                                 <rect key="frame" x="129" y="124" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -292,7 +285,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bd-2R-xL8">
-                                <rect key="frame" x="-21" y="69" width="452" height="827"/>
+                                <rect key="frame" x="-21" y="88" width="452" height="808"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="0ZB-u5-Tqh" kind="embed" id="7X3-zm-mLo"/>
@@ -315,11 +308,18 @@
         <!--一覧-->
         <scene sceneID="Ss5-Vx-iO3">
             <objects>
-                <tableViewController id="Jhq-gk-6Td" customClass="DiaryTableTableViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="list" id="Jhq-gk-6Td" customClass="DiaryTableTableViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IVa-g8-NUc">
-                        <rect key="frame" x="0.0" y="0.0" width="452" height="773"/>
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <containerView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="tKm-ia-hak">
+                            <rect key="frame" x="0.0" y="99.5" width="452" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <connections>
+                                <segue destination="URj-sv-n7f" kind="embed" id="Cd5-ZB-DOq"/>
+                            </connections>
+                        </containerView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Uk8-nk-YSg">
                                 <rect key="frame" x="0.0" y="28" width="452" height="43.5"/>
@@ -349,7 +349,7 @@
             <objects>
                 <viewController id="Alm-29-M9d" customClass="DiaryDetailViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Sc-Vf-Lb3">
-                        <rect key="frame" x="0.0" y="0.0" width="452" height="773"/>
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-N9-5LR">
@@ -359,6 +359,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpM-bG-7zN">
+                                <rect key="frame" x="0.0" y="626" width="452" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="dDJ-AY-l1W" kind="embed" id="rjz-9J-cCp"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="38F-gH-YzF"/>
@@ -370,14 +377,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKt-FQ-7So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="2355"/>
+            <point key="canvasLocation" x="2385.507246376812" y="2354.4642857142858"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="lMb-YZ-LrT">
             <objects>
-                <viewController id="3od-sJ-X5z" customClass="DiaryViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="create" id="3od-sJ-X5z" customClass="DiaryViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ycv-1e-FOS">
-                        <rect key="frame" x="0.0" y="0.0" width="452" height="773"/>
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-Z4-Vcl">
@@ -424,7 +431,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-Ao-Oda">
-                                <rect key="frame" x="0.0" y="645" width="452" height="128"/>
+                                <rect key="frame" x="0.0" y="626" width="452" height="128"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="tX7-at-xTX" kind="embed" id="vQW-k5-h9R"/>
@@ -454,19 +461,18 @@
                         <outlet property="footer" destination="4b8-Ao-Oda" id="ES6-Pd-T8f"/>
                         <outlet property="imitation" destination="alt-0F-3Bl" id="aZ8-e8-7rq"/>
                         <outlet property="imitationLabel" destination="Awe-MP-rmQ" id="L2C-qC-zGd"/>
-                        <segue destination="Jhq-gk-6Td" kind="show" id="qsB-pO-p0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfT-S9-64P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4218.840579710145" y="931.80803571428567"/>
+            <point key="canvasLocation" x="4161" y="695"/>
         </scene>
         <!--Footer View Controller-->
         <scene sceneID="jTe-8Y-Mds">
             <objects>
                 <viewController id="0ZB-u5-Tqh" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uta-xZ-1Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="452" height="827"/>
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
@@ -491,11 +497,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aX-El-JCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4219" y="1417"/>
+            <point key="canvasLocation" x="4252" y="1428"/>
+        </scene>
+        <!--Footer View Controller-->
+        <scene sceneID="hWk-Cm-K6b">
+            <objects>
+                <viewController id="URj-sv-n7f" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TEr-W4-gWM">
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mx7-3w-sx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3309" y="1559"/>
+        </scene>
+        <!--Footer View Controller-->
+        <scene sceneID="oGx-Lf-xjE">
+            <objects>
+                <viewController id="dDJ-AY-l1W" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2n9-eC-bEZ">
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Nl-1K-NhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3828" y="2247"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qsB-pO-p0c"/>
-        <segue reference="9eX-U1-sKE"/>
+        <segue reference="t9i-tz-Gh8"/>
     </inferredMetricsTieBreakers>
 </document>
