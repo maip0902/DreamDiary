@@ -13,6 +13,7 @@
 		E7088A662463111D003E6393 /* passwordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A652463111D003E6393 /* passwordResetViewController.swift */; };
 		E7088A6824667159003E6393 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A6724667159003E6393 /* CustomLayout.swift */; };
 		E7088A722467C479003E6393 /* FooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A712467C479003E6393 /* FooterViewController.swift */; };
+		E7088A7A24684060003E6393 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7088A7924684060003E6393 /* icon.png */; };
 		E709FE09245FEFED007CE6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE08245FEFED007CE6BA /* AppDelegate.swift */; };
 		E709FE0B245FEFED007CE6BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE0A245FEFED007CE6BA /* SceneDelegate.swift */; };
 		E709FE0D245FEFED007CE6BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE0C245FEFED007CE6BA /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		E7088A652463111D003E6393 /* passwordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordResetViewController.swift; sourceTree = "<group>"; };
 		E7088A6724667159003E6393 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		E7088A712467C479003E6393 /* FooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewController.swift; sourceTree = "<group>"; };
+		E7088A7924684060003E6393 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "../../../../Downloads/logaster_No_1_small_size_163x71_pixels_(PNG)/icon.png"; sourceTree = "<group>"; };
 		E709FE05245FEFED007CE6BA /* DreamDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E709FE08245FEFED007CE6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E709FE0A245FEFED007CE6BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				E709FE3B245FF6D6007CE6BA /* View */,
 				E709FE3A245FF6BB007CE6BA /* Model */,
 				E709FE0A245FEFED007CE6BA /* SceneDelegate.swift */,
+				E7088A7924684060003E6393 /* icon.png */,
 				E709FE11245FEFEE007CE6BA /* Assets.xcassets */,
 				E709FE13245FEFEE007CE6BA /* LaunchScreen.storyboard */,
 				E709FE16245FEFEE007CE6BA /* Info.plist */,
@@ -404,6 +407,7 @@
 				E709FE15245FEFEE007CE6BA /* LaunchScreen.storyboard in Resources */,
 				E709FE12245FEFEE007CE6BA /* Assets.xcassets in Resources */,
 				E709FE10245FEFED007CE6BA /* Main.storyboard in Resources */,
+				E7088A7A24684060003E6393 /* icon.png in Resources */,
 				E709FE68246162AB007CE6BA /* Info.plist in Resources */,
 				E709FE6E24616562007CE6BA /* GoogleService-Info.plist in Resources */,
 			);

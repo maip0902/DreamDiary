@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../Downloads/bg.jpg">
+   </FileRef>
+   <FileRef
       location = "group:DreamDiary.xcodeproj">
    </FileRef>
    <FileRef
