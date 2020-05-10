@@ -18,9 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Ep-tdX">
                                 <rect key="frame" x="147" y="346" width="120" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="新規登録">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.50168056740530309" blue="0.52392818222625248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -28,19 +28,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0v-ev-4Ba">
-                                <rect key="frame" x="146" y="439" width="122" height="48"/>
+                                <rect key="frame" x="146" y="440" width="122" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="ログイン">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="xeJ-xn-b73" kind="show" id="t9i-tz-Gh8"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7AS-Uf-QL7">
+                                <rect key="frame" x="94" y="149" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.83970659894798461" blue="0.85574269858750851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Top" id="gaa-nt-lMW"/>
@@ -83,21 +87,21 @@
                                 <rect key="frame" x="50" y="238" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhE-9N-0LM">
                                 <rect key="frame" x="50" y="324" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-YD-OX4">
                                 <rect key="frame" x="50" y="417" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4w-rR-tpD">
@@ -108,23 +112,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao2-uM-V5U">
-                                <rect key="frame" x="140" y="561" width="106" height="61"/>
+                                <rect key="frame" x="165" y="566" width="106" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="登録"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="登録">
+                                    <color key="titleColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="register:" destination="Mm5-I1-5g8" eventType="touchUpInside" id="6Nj-vi-F01"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wZB-iY-M71"/>
                     </view>
                     <navigationItem key="navigationItem" title="登録" id="EDu-IH-FuM"/>
                     <connections>
                         <outlet property="email" destination="d1W-ht-moE" id="pam-WF-uHl"/>
+                        <outlet property="emailLabel" destination="hhE-9N-0LM" id="4vZ-mt-l5Y"/>
                         <outlet property="password" destination="AMf-2l-XUg" id="3En-3g-z4X"/>
+                        <outlet property="passwordLabel" destination="lgw-YD-OX4" id="AhB-Tb-Emh"/>
+                        <outlet property="register" destination="ao2-uM-V5U" id="OIb-WL-1NV"/>
                         <outlet property="userName" destination="NMn-Oa-fBG" id="vwq-lF-hvt"/>
+                        <outlet property="userNameLabel" destination="QNZ-uq-jUt" id="iKA-nV-Ux2"/>
                         <segue destination="xeJ-xn-b73" kind="show" identifier="loginAfterRegister" id="9eX-U1-sKE"/>
                     </connections>
                 </viewController>
@@ -155,7 +165,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AxS-Ls-R5d"/>
                     </view>
                     <connections>
@@ -190,14 +200,14 @@
                                 <rect key="frame" x="42" y="254" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-DU-f0B">
                                 <rect key="frame" x="42" y="345" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAc-R8-NeZ">
@@ -205,7 +215,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="ログイン">
-                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="xeJ-xn-b73" eventType="touchUpInside" id="bvn-Uo-ThT"/>
@@ -222,7 +232,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cjV-UM-18d"/>
                     </view>
                     <navigationItem key="navigationItem" title="ログイン" id="EPz-vl-Izr"/>
@@ -274,40 +284,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-el-uf1">
-                                <rect key="frame" x="154" y="499" width="118" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="新規作成"/>
-                                <connections>
-                                    <action selector="toCreate:" destination="HeA-Fe-lAN" eventType="touchUpInside" id="U1X-gi-Rwg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxq-so-wLy">
-                                <rect key="frame" x="148" y="329" width="130" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="日記一覧"/>
-                                <connections>
-                                    <action selector="showList:" destination="HeA-Fe-lAN" eventType="touchUpInside" id="Lon-Sc-RDz"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲストさんのページ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-Do-mOg">
-                                <rect key="frame" x="129" y="122" width="156" height="21"/>
+                                <rect key="frame" x="129" y="124" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bd-2R-xL8">
+                                <rect key="frame" x="-21" y="69" width="452" height="827"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="0ZB-u5-Tqh" kind="embed" id="7X3-zm-mLo"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="gKf-eT-QcD"/>
                     </view>
                     <navigationItem key="navigationItem" title="メイン" id="X3u-FC-NFw"/>
                     <connections>
+                        <outlet property="footer" destination="4bd-2R-xL8" id="Ykg-fu-Zwn"/>
                         <outlet property="loginLabel" destination="Dwt-Do-mOg" id="K61-Cf-Yb0"/>
-                        <segue destination="3od-sJ-X5z" kind="show" identifier="toCreateDiary" id="hI3-eh-YUr"/>
-                        <segue destination="Jhq-gk-6Td" kind="show" identifier="showList" id="Xqu-3T-dSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdI-K1-gbk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -319,15 +317,15 @@
             <objects>
                 <tableViewController id="Jhq-gk-6Td" customClass="DiaryTableTableViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IVa-g8-NUc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Uk8-nk-YSg">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="452" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uk8-nk-YSg" id="vKa-pX-IzT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="452" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -344,14 +342,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPh-3o-hPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="1542"/>
+            <point key="canvasLocation" x="2386" y="1571"/>
         </scene>
         <!--Diary Detail View Controller-->
         <scene sceneID="bix-8l-6vb">
             <objects>
                 <viewController id="Alm-29-M9d" customClass="DiaryDetailViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Sc-Vf-Lb3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-N9-5LR">
@@ -362,7 +360,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="38F-gH-YzF"/>
                     </view>
                     <navigationItem key="navigationItem" id="k5O-cJ-nep"/>
@@ -372,14 +370,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKt-FQ-7So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3552.1739130434785" y="1542.8571428571429"/>
+            <point key="canvasLocation" x="2386" y="2355"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="lMb-YZ-LrT">
             <objects>
                 <viewController id="3od-sJ-X5z" customClass="DiaryViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ycv-1e-FOS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="773"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-Z4-Vcl">
@@ -412,7 +410,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bED-nc-2RD">
-                                <rect key="frame" x="44" y="184" width="322" height="34"/>
+                                <rect key="frame" x="46" y="167" width="322" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -433,25 +431,65 @@
                                     <action selector="create:" destination="3od-sJ-X5z" eventType="touchUpInside" id="h2b-AH-pnH"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-Ao-Oda">
+                                <rect key="frame" x="0.0" y="645" width="452" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="tX7-at-xTX" kind="embed" id="vQW-k5-h9R"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="55X-YH-3O7"/>
                     </view>
                     <navigationItem key="navigationItem" id="i6a-dP-Fli"/>
                     <connections>
                         <outlet property="body" destination="WzE-AL-j98" id="C2s-b2-oZA"/>
                         <outlet property="date" destination="bED-nc-2RD" id="02h-e7-Tu3"/>
+                        <outlet property="footer" destination="4b8-Ao-Oda" id="ES6-Pd-T8f"/>
                         <outlet property="imitation" destination="alt-0F-3Bl" id="aZ8-e8-7rq"/>
                         <segue destination="Jhq-gk-6Td" kind="show" id="qsB-pO-p0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfT-S9-64P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="853"/>
+            <point key="canvasLocation" x="4218.840579710145" y="931.80803571428567"/>
+        </scene>
+        <!--Footer View Controller-->
+        <scene sceneID="jTe-8Y-Mds">
+            <objects>
+                <viewController id="0ZB-u5-Tqh" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uta-xZ-1Kz">
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="827"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="Jhq-gk-6Td" kind="show" identifier="toShowList" id="ntN-vN-IYA"/>
+                        <segue destination="3od-sJ-X5z" kind="show" identifier="toCreate" id="CsS-YZ-By5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPx-HQ-sqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3266.666666666667" y="690.73660714285711"/>
+        </scene>
+        <!--Footer View Controller-->
+        <scene sceneID="YYO-2B-7Zo">
+            <objects>
+                <viewController id="tX7-at-xTX" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yyo-BN-us8">
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aX-El-JCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4219" y="1417"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xqu-3T-dSV"/>
-        <segue reference="t9i-tz-Gh8"/>
+        <segue reference="qsB-pO-p0c"/>
+        <segue reference="9eX-U1-sKE"/>
     </inferredMetricsTieBreakers>
 </document>

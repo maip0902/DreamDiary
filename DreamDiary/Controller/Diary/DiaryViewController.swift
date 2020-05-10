@@ -18,8 +18,16 @@ class DiaryViewController: UIViewController {
     
     var loginUser: User?
     
+    @IBOutlet weak var footer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let screenWidth = UIScreen.main.bounds.size.width
+        let screenHeight = UIScreen.main.bounds.size.height
+        let layout = CustomLayout(screenWidth, screenHeight)
+        layout.setFooter(footer)
+        
         datePicker.datePickerMode = UIDatePicker.Mode.date
         date.inputView = datePicker
         

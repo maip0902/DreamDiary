@@ -28,9 +28,9 @@ class LoginViewController: UIViewController {
         layout.setInputField(email, password)
         layout.centeringWidth(forgetoasswordlabel,screenHeight*0.6,screenWidth*0.5,screenHeight*0.1)
         layout.centeringWidth(login, screenHeight*0.55,screenWidth*0.5,screenHeight*0.05)
-        layout.setCorenerRadius(login)
-        layout.setBorderWidth(login)
-        layout.setBorderColor(login)
+        layout.setCorenerRadius(login, 0.1)
+        layout.setBorderWidth(login, 1)
+        layout.setBorderColor(login, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
         
         // Do any additional setup after loading the view.
     }
