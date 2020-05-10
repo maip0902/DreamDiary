@@ -22,7 +22,11 @@ class ViewController: UIViewController {
         layout.setBorderWidth(login, 1)
         layout.setBorderColor(create, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
         layout.setBorderColor(login, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
-        print(screenHeight)
+        
+        // logo
+        let logoImage = UIImageView(image: UIImage(named: "logo"))
+        logoImage.frame = CGRect(x: screenWidth*0.17, y: screenHeight*0.1, width: screenWidth*0.75, height: screenHeight*0.2)
+        self.view.addSubview(logoImage)
     }
 }
 
