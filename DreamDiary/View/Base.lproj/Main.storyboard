@@ -384,7 +384,7 @@
                                 <rect key="frame" x="164" y="138" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WzE-AL-j98">
@@ -399,14 +399,14 @@
                                 <rect key="frame" x="164" y="248" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="意味" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-MP-rmQ">
                                 <rect key="frame" x="161" y="407" width="92" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bED-nc-2RD">
@@ -423,14 +423,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8G-un-AUp">
-                                <rect key="frame" x="128" y="544" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="作成"/>
-                                <connections>
-                                    <action selector="create:" destination="3od-sJ-X5z" eventType="touchUpInside" id="h2b-AH-pnH"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-Ao-Oda">
                                 <rect key="frame" x="0.0" y="645" width="452" height="128"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -438,6 +430,16 @@
                                     <segue destination="tX7-at-xTX" kind="embed" id="vQW-k5-h9R"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8G-un-AUp">
+                                <rect key="frame" x="128" y="544" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="作成">
+                                    <color key="titleColor" red="1" green="0.5016805674" blue="0.52392818220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="create:" destination="3od-sJ-X5z" eventType="touchUpInside" id="h2b-AH-pnH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="55X-YH-3O7"/>
@@ -445,9 +447,13 @@
                     <navigationItem key="navigationItem" id="i6a-dP-Fli"/>
                     <connections>
                         <outlet property="body" destination="WzE-AL-j98" id="C2s-b2-oZA"/>
+                        <outlet property="bodyLabel" destination="TLm-pV-cdq" id="2yz-h2-dI6"/>
+                        <outlet property="createButton" destination="d8G-un-AUp" id="Jwi-xp-fQd"/>
                         <outlet property="date" destination="bED-nc-2RD" id="02h-e7-Tu3"/>
+                        <outlet property="dateLabel" destination="f9c-Z4-Vcl" id="kQb-V2-PVR"/>
                         <outlet property="footer" destination="4b8-Ao-Oda" id="ES6-Pd-T8f"/>
                         <outlet property="imitation" destination="alt-0F-3Bl" id="aZ8-e8-7rq"/>
+                        <outlet property="imitationLabel" destination="Awe-MP-rmQ" id="L2C-qC-zGd"/>
                         <segue destination="Jhq-gk-6Td" kind="show" id="qsB-pO-p0c"/>
                     </connections>
                 </viewController>

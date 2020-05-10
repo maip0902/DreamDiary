@@ -12,6 +12,15 @@ class DiaryViewController: UIViewController {
     
     @IBOutlet weak var date: UITextField!
     
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    @IBOutlet weak var imitationLabel: UILabel!
+    
+    @IBOutlet weak var createButton: UIButton!
+    
     var datePicker: UIDatePicker = UIDatePicker()
     
     var diary = RealmDiaryRepository()
@@ -28,6 +37,15 @@ class DiaryViewController: UIViewController {
         let layout = CustomLayout(screenWidth, screenHeight)
         layout.setFooter(footer)
         
+        layout.setThreeFormLabel(dateLabel, bodyLabel, imitationLabel)
+        imitationLabel.frame = CGRect(x:screenWidth*0.1, y:screenHeight*0.5, width: screenWidth*0.3, height:screenHeight*0.05)
+        body.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.3, width:screenWidth*0.5, height:screenHeight*0.15)
+        imitation.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.5, width:screenWidth*0.5, height:screenHeight*0.1)
+        
+        layout.centeringWidth(createButton, screenHeight*0.7, screenWidth*0.5, screenHeight*0.1)
+        layout.setBorderColor(createButton, UIColor(red: 255, green: 128, blue: 134, alpha: 1.0).cgColor)
+        layout.setBorderWidth(createButton, 2)
+        layout.setCorenerRadius(createButton, 0.1)
         datePicker.datePickerMode = UIDatePicker.Mode.date
         date.inputView = datePicker
         
@@ -38,7 +56,7 @@ class DiaryViewController: UIViewController {
         
         date.inputView = datePicker
         date.inputAccessoryView = toolbar
-        
+        date.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.2, width:screenWidth*0.5, height:screenHeight*0.05)
         // Do any additional setup after loading the view.
     }
     
