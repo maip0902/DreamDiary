@@ -3,4 +3,54 @@
    uuid = "822C8C50-D0B4-482D-99F9-78EA5103521B"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34D0353A-991D-444F-94CD-1E9DE3522FB0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DreamDiary/Controller/Auth/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "register(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "34D0353A-991D-444F-94CD-1E9DE3522FB0 - a6d6b764b150dbae"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DreamDiary.RegisterViewController.register(Any) -&gt; ()"
+                  moduleName = "DreamDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kandamai/Documents/swift/DreamDiary/DreamDiary/Controller/Auth/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1826">
+               </Location>
+               <Location
+                  uuid = "34D0353A-991D-444F-94CD-1E9DE3522FB0 - 235a6b1cba37e929"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DreamDiary.RegisterViewController.register(Any) -&gt; ()"
+                  moduleName = "DreamDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kandamai/Documents/swift/DreamDiary/DreamDiary/Controller/Auth/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "402">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

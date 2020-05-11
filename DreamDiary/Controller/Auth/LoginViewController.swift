@@ -41,9 +41,17 @@ class LoginViewController: UIViewController {
         
         // ログイン処理
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            let errorMessage = UILabel()
           // [START_EXCLUDE]
-            if let error = error {
-              return
+            if error != nil {
+                if let errorCode = AuthErrorCode(rawValue: error!._code) {
+                    switch(errorCode) {
+                        case .wrongPassword:
+                            errorMessage.text = "パスワードが間違っています"
+                        default :
+                            errorMessage.text = "ログインできません"
+                    }
+                }
             }
             self?.performSegue(withIdentifier: "showMain", sender: nil)
         }
