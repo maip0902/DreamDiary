@@ -37,18 +37,18 @@ class DiaryViewController: UIViewController {
         let layout = CustomLayout(screenWidth, screenHeight)
         layout.setFooter(footer)
         
-        layout.setThreeFormLabel(dateLabel, bodyLabel, imitationLabel)
-        imitationLabel.frame = CGRect(x:screenWidth*0.1, y:screenHeight*0.5, width: screenWidth*0.3, height:screenHeight*0.05)
+        layout.spaceBetweenHeightLabel(uiContents: [dateLabel, bodyLabel], space: 0.2, 0.1, 0.2, 0.5, 0.05)
+        layout.setLabelPositionByRatio(0.1, 0.5, 0.3, 0.05, uiContent: imitationLabel)
+        
         body.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.3, width:screenWidth*0.5, height:screenHeight*0.15)
         imitation.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.5, width:screenWidth*0.5, height:screenHeight*0.1)
         
         layout.centeringWidth(createButton, 0.7, 0.5, 0.1)
-        layout.setBorderColor(createButton, UIColor(red: 255, green: 128, blue: 134, alpha: 1.0).cgColor)
-        layout.setBorderWidth(createButton, 2)
-        layout.setCorenerRadius(createButton, 0.1)
+        layout.setOutlet(createButton, radius: 0.1, borderWidth: 2, color: UIColor(red: 255, green: 128, blue: 134, alpha: 1.0).cgColor)
+        
+        // datePicker
         datePicker.datePickerMode = UIDatePicker.Mode.date
         date.inputView = datePicker
-        
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
         let spacelItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
@@ -65,12 +65,8 @@ class DiaryViewController: UIViewController {
 
         // 日付のフォーマット
         let formatter = DateFormatter()
-
-        //"yyyy年MM月dd日"を"yyyy/MM/dd"したりして出力の仕方を好きに変更できるよ
         formatter.dateFormat = "yyyy年MM月dd日"
 
-        //(from: datePicker.date))を指定してあげることで
-        //datePickerで指定した日付が表示される
         date.text = "\(formatter.string(from: datePicker.date))"
 
     }

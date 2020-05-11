@@ -27,17 +27,15 @@ class RegisterViewController: UIViewController {
         let screenWidth = UIScreen.main.bounds.size.width
         let screenHeight = UIScreen.main.bounds.size.height
         let layout = CustomLayout(screenWidth, screenHeight)
-        layout.setThreeFormLabel(userNameLabel, emailLabel, passwordLabel)
-        layout.setThreeInputField(userName, email, password)
+        layout.spaceBetweenHeight(uiContents: [userName, email, password], space: 0.2, 0.35, 0.2, 0.5, 0.05)
+        layout.spaceBetweenHeightLabel(uiContents: [userNameLabel, emailLabel, passwordLabel], space: 0.2, 0.1, 0.2, 0.5, 0.05)
         layout.centeringWidth(register, 0.6, 0.5, 0.05)
-        layout.setCorenerRadius(register, 0.1)
-        layout.setBorderWidth(register, 2)
-        layout.setBorderColor(register, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
+        layout.setOutlet(register, radius: 0.1, borderWidth: 2, color: UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
         // パスワードフィールド入力非表示モード
         password.isSecureTextEntry = true
         // Do any additional setup after loading the view.
         errorMessage.text = ""
-        errorMessage.frame = CGRect(x: screenWidth*0.05, y: screenHeight*0.5, width:screenWidth*0.9, height:screenHeight*0.1)
+        layout.setLabelPositionByRatio(0.05, 0.5, 0.9, 0.1, uiContent: errorMessage)
         errorMessage.textColor = UIColor.red
         self.view.addSubview(errorMessage)
     }

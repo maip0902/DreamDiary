@@ -26,13 +26,11 @@ class LoginViewController: UIViewController {
         let screenHeight = UIScreen.main.bounds.size.height
         let layout = CustomLayout(screenWidth, screenHeight)
         
-        layout.setFormLabel(emailLabel, passwordLabel)
-        layout.setInputField(email, password)
+        layout.spaceBetweenHeightLabel(uiContents: [emailLabel, passwordLabel], space: 0.2, 0.1, 0.2, 0.2, 0.05)
+        layout.spaceBetweenHeight(uiContents: [email, password], space: 0.2, 0.35, 0.2, 0.5, 0.05)
         layout.centeringWidth(forgetoasswordlabel, 0.6, 0.5, 0.1)
         layout.centeringWidth(login, 0.55, 0.5, 0.05)
-        layout.setCorenerRadius(login, 0.1)
-        layout.setBorderWidth(login, 1)
-        layout.setBorderColor(login, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
+        layout.setOutlet(login, radius: 0.1, borderWidth: 1, color: UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
         
         // Do any additional setup after loading the view.
         errorMessage.text = ""

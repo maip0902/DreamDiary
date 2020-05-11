@@ -18,36 +18,44 @@ struct CustomLayout {
         self.screenHeight = screenHeight
     }
     
-    // Top用
-    func spaceBetween(_ first: UIControl, _ second: UIControl) {
-        first.frame = CGRect(x:screenWidth*0.2, y:screenHeight*0.25 + screenHeight*0.1, width: screenWidth*0.6, height:screenHeight*0.1)
-        second.frame = CGRect(x:screenWidth*0.2, y:screenHeight*0.5 + screenHeight*0.1, width: screenWidth*0.6, height:screenHeight*0.1)
+    func setPositionByRatio(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat, uiContent: UIControl) {
+        uiContent.frame = CGRect(x:screenWidth*x, y:screenHeight*y, width: screenWidth*width, height:screenHeight*height)
     }
     
-    // Login用
-    func setFormLabel(_ firstLabel: UILabel, _ secondLabel: UILabel) {
-        firstLabel.frame = CGRect(x:screenWidth*0.1, y:screenHeight*0.2, width: screenWidth*0.3, height:screenHeight*0.05)
-        secondLabel.frame = CGRect(x:screenWidth*0.1, y:screenHeight*0.4, width: screenWidth*0.3, height:screenHeight*0.05)
+    func setLabelPositionByRatio(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat, uiContent: UILabel) {
+        uiContent.frame = CGRect(x:screenWidth*x, y:screenHeight*y, width: screenWidth*width, height:screenHeight*height)
     }
     
-    // Register用
-    func setThreeFormLabel(_ firstLabel: UILabel, _ secondLabel: UILabel, _ thirdLabel: UILabel) {
-        firstLabel.frame = CGRect(x:screenWidth*0.1, y:screenHeight*0.2, width: screenWidth*0.3, height:screenHeight*0.05)
-        secondLabel.frame = CGRect(x:screenWidth*0.1, y:screenHeight*0.3, width: screenWidth*0.3, height:screenHeight*0.05)
-        thirdLabel.frame = CGRect(x:screenWidth*0.1, y:screenHeight*0.4, width: screenWidth*0.3, height:screenHeight*0.05)
+    // width
+    func spaceBetweenWidth(uiContents: [UIControl], space: CGFloat, _ y: CGFloat, _ xStart: CGFloat, _ width: CGFloat, _ height: CGFloat) {
+        let xStep = screenWidth*space
+        for (index, uiContent) in uiContents.enumerated() {
+            uiContent.frame = CGRect(x: screenHeight*xStart + CGFloat(index)*xStep, y: screenHeight*y, width: self.screenWidth*width, height: self.screenHeight*height)
+        }
     }
     
-    // Login用
-    func setInputField(_ firstInput: UIControl, _ secondInput: UIControl) {
-        firstInput.frame = CGRect(x:screenWidth*0.35, y:screenHeight*0.2, width: screenWidth*0.5, height:screenHeight*0.05)
-        secondInput.frame = CGRect(x:screenWidth*0.35, y:screenHeight*0.4, width: screenWidth*0.5, height:screenHeight*0.05)
+    // width label
+    func spaceBetweenWidthLabel(uiContents: [UILabel], space: CGFloat, _ y: CGFloat, _ xStart: CGFloat, _ width: CGFloat, _ height: CGFloat) {
+        let xStep = screenWidth*space
+        for (index, uiContent) in uiContents.enumerated() {
+            uiContent.frame = CGRect(x: screenHeight*xStart + CGFloat(index)*xStep, y: screenHeight*y, width: self.screenWidth*width, height: self.screenHeight*height)
+        }
     }
     
-    // Register用
-    func setThreeInputField(_ firstInput: UIControl, _ secondInput: UIControl, _ thirdInput: UIControl) {
-        firstInput.frame = CGRect(x:screenWidth*0.35, y:screenHeight*0.2, width: screenWidth*0.5, height:screenHeight*0.05)
-        secondInput.frame = CGRect(x:screenWidth*0.35, y:screenHeight*0.3, width: screenWidth*0.5, height:screenHeight*0.05)
-        thirdInput.frame = CGRect(x:screenWidth*0.35, y:screenHeight*0.4, width: screenWidth*0.5, height:screenHeight*0.05)
+    // height
+    func spaceBetweenHeight(uiContents: [UIControl], space: CGFloat, _ x: CGFloat, _ yStart: CGFloat, _ width: CGFloat, _ height: CGFloat) {
+        let yStep = screenWidth*space
+        for (index, uiContent) in uiContents.enumerated() {
+            uiContent.frame = CGRect(x: self.screenWidth*x, y: screenHeight*yStart + CGFloat(index)*yStep, width: self.screenWidth*width, height: self.screenHeight*height)
+        }
+    }
+    
+    // height label
+    func spaceBetweenHeightLabel(uiContents: [UILabel], space: CGFloat, _ x: CGFloat, _ yStart: CGFloat, _ width: CGFloat, _ height: CGFloat) {
+        let yStep = screenWidth*space
+        for (index, uiContent) in uiContents.enumerated() {
+            uiContent.frame = CGRect(x: self.screenWidth*x, y: screenHeight*yStart + CGFloat(index)*yStep, width: self.screenWidth*width, height: self.screenHeight*height)
+        }
     }
     
     // footer
@@ -61,15 +69,9 @@ struct CustomLayout {
      丸角・枠線の太さ・widthのセンタリング
      */
     
-    func setCorenerRadius(_ uiContent: UIControl, _ ratio: CGFloat) {
-        uiContent.layer.cornerRadius = uiContent.frame.size.width * ratio
-    }
-    
-    func setBorderWidth(_ uiContent: UIControl, _ width: CGFloat) {
-        uiContent.layer.borderWidth = width
-    }
-    
-    func setBorderColor(_ uiContent: UIControl, _ color: CGColor) {
+    func setOutlet(_ uiContent: UIControl, radius: CGFloat, borderWidth: CGFloat, color: CGColor) {
+        uiContent.layer.cornerRadius = uiContent.frame.size.width * radius
+        uiContent.layer.borderWidth = borderWidth
         uiContent.layer.borderColor = color
     }
     
