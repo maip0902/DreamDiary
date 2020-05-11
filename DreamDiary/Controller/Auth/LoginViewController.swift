@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var login: UIButton!
     
+    let errorMessage = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.password.isSecureTextEntry = true
@@ -33,25 +35,32 @@ class LoginViewController: UIViewController {
         layout.setBorderColor(login, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
         
         // Do any additional setup after loading the view.
+        errorMessage.text = ""
+        errorMessage.frame = CGRect(x: screenWidth*0.05, y: screenHeight*0.45, width:screenWidth*0.9, height:screenHeight*0.1)
+        errorMessage.textColor = UIColor.red
+        self.view.addSubview(errorMessage)
     }
     
     @IBAction func login(_ sender: Any) {
+        self.errorMessage.text = ""
+        self.view.addSubview(errorMessage)
         let email = self.email.text ?? ""
         let password = self.password.text ?? ""
         
         // ログイン処理
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            let errorMessage = UILabel()
           // [START_EXCLUDE]
             if error != nil {
                 if let errorCode = AuthErrorCode(rawValue: error!._code) {
                     switch(errorCode) {
                         case .wrongPassword:
-                            errorMessage.text = "パスワードが間違っています"
+                            self?.errorMessage.text = "パスワードが間違っています"
                         default :
-                            errorMessage.text = "ログインできません"
+                            self?.errorMessage.text = "ログインできません"
                     }
                 }
+                self?.view.addSubview(self?.errorMessage as! UILabel)
+                return
             }
             self?.performSegue(withIdentifier: "showMain", sender: nil)
         }
