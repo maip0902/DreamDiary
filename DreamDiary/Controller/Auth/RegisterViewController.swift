@@ -29,7 +29,7 @@ class RegisterViewController: UIViewController {
         let layout = CustomLayout(screenWidth, screenHeight)
         layout.setThreeFormLabel(userNameLabel, emailLabel, passwordLabel)
         layout.setThreeInputField(userName, email, password)
-        layout.centeringWidth(register, screenHeight*0.6, screenWidth*0.5, screenHeight*0.05)
+        layout.centeringWidth(register, 0.6, 0.5, 0.05)
         layout.setCorenerRadius(register, 0.1)
         layout.setBorderWidth(register, 2)
         layout.setBorderColor(register, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)

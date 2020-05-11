@@ -74,6 +74,6 @@ struct CustomLayout {
     }
     
     func centeringWidth(_ uiContent: UIControl, _ yPosition: CGFloat, _ contetWidth: CGFloat, _ contentHeight: CGFloat) {
-        uiContent.frame = CGRect(x:(screenWidth - contetWidth)/2, y:yPosition, width: contetWidth, height:contentHeight)
+        uiContent.frame = CGRect(x:(screenWidth - screenWidth*contetWidth)/2, y:screenHeight*yPosition, width: screenWidth*contetWidth, height:screenHeight*contentHeight)
     }
 }

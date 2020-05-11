@@ -42,7 +42,7 @@ class DiaryViewController: UIViewController {
         body.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.3, width:screenWidth*0.5, height:screenHeight*0.15)
         imitation.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.5, width:screenWidth*0.5, height:screenHeight*0.1)
         
-        layout.centeringWidth(createButton, screenHeight*0.7, screenWidth*0.5, screenHeight*0.1)
+        layout.centeringWidth(createButton, 0.7, 0.5, 0.1)
         layout.setBorderColor(createButton, UIColor(red: 255, green: 128, blue: 134, alpha: 1.0).cgColor)
         layout.setBorderWidth(createButton, 2)
         layout.setCorenerRadius(createButton, 0.1)
@@ -87,18 +87,4 @@ class DiaryViewController: UIViewController {
         }
         
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

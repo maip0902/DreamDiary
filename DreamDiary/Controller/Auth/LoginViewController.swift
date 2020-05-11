@@ -28,8 +28,8 @@ class LoginViewController: UIViewController {
         
         layout.setFormLabel(emailLabel, passwordLabel)
         layout.setInputField(email, password)
-        layout.centeringWidth(forgetoasswordlabel,screenHeight*0.6,screenWidth*0.5,screenHeight*0.1)
-        layout.centeringWidth(login, screenHeight*0.55,screenWidth*0.5,screenHeight*0.05)
+        layout.centeringWidth(forgetoasswordlabel, 0.6, 0.5, 0.1)
+        layout.centeringWidth(login, 0.55, 0.5, 0.05)
         layout.setCorenerRadius(login, 0.1)
         layout.setBorderWidth(login, 1)
         layout.setBorderColor(login, UIColor(red: 255, green: 204, blue: 204, alpha: 1.0).cgColor)
@@ -70,14 +70,4 @@ class LoginViewController: UIViewController {
     @IBAction func showPasswordReset(_ sender: Any) {
         self.performSegue(withIdentifier: "toPasswordReset", sender: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

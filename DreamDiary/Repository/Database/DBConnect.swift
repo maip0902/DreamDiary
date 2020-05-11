@@ -21,11 +21,4 @@ struct DBConnect: DB {
             realm.delete(object)
         }
     }
-    
-//    func append(user: User, diary: Diary) {
-//        let realm = try! Realm()
-//        try! realm.write {
-//            user.diaries.append(diary)
-//        }
-//    }
 }
