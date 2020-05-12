@@ -1,11 +1,14 @@
 
 import UIKit
 import RealmSwift
+import FSCalendar
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var create: UIButton!
     @IBOutlet weak var login: UIButton!
+    
+    @objc fileprivate weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()

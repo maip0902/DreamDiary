@@ -14,6 +14,7 @@
 		E7088A6824667159003E6393 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A6724667159003E6393 /* CustomLayout.swift */; };
 		E7088A722467C479003E6393 /* FooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A712467C479003E6393 /* FooterViewController.swift */; };
 		E7088A7A24684060003E6393 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7088A7924684060003E6393 /* icon.png */; };
+		E7088A80246A5707003E6393 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A7F246A5707003E6393 /* CalenderViewController.swift */; };
 		E709FE09245FEFED007CE6BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE08245FEFED007CE6BA /* AppDelegate.swift */; };
 		E709FE0B245FEFED007CE6BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE0A245FEFED007CE6BA /* SceneDelegate.swift */; };
 		E709FE0D245FEFED007CE6BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709FE0C245FEFED007CE6BA /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		E7088A6724667159003E6393 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		E7088A712467C479003E6393 /* FooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewController.swift; sourceTree = "<group>"; };
 		E7088A7924684060003E6393 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "../../../../Downloads/logaster_No_1_small_size_163x71_pixels_(PNG)/icon.png"; sourceTree = "<group>"; };
+		E7088A7F246A5707003E6393 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		E709FE05245FEFED007CE6BA /* DreamDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E709FE08245FEFED007CE6BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E709FE0A245FEFED007CE6BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				E709FE522461216D007CE6BA /* DiaryViewController.swift */,
 				E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */,
 				E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */,
+				E7088A7F246A5707003E6393 /* CalenderViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			files = (
 				E709FE632461443C007CE6BA /* DiaryTableTableViewController.swift in Sources */,
 				E709FE4824601AE7007CE6BA /* LoginViewController.swift in Sources */,
+				E7088A80246A5707003E6393 /* CalenderViewController.swift in Sources */,
 				E709FE5D2461288E007CE6BA /* DiaryRepository.swift in Sources */,
 				E709FE5124611EA8007CE6BA /* MainViewController.swift in Sources */,
 				E709FE39245FF518007CE6BA /* User.swift in Sources */,

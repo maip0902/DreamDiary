@@ -8,6 +8,9 @@ class DiaryTableTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let screenWidth = UIScreen.main.bounds.size.width
+        let screenHeight = UIScreen.main.bounds.size.height
+        let layout = CustomLayout(screenWidth, screenHeight)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,6 +47,7 @@ class DiaryTableTableViewController: UITableViewController {
             cell.textLabel?.text = diary.date
             cell.textLabel?.textColor = UIColor.orange
             cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
+            cell.backgroundColor = UIColor(red: 255/255.0, green: 214/255.0, blue: 218/255.0, alpha: 1.0)
         }
         
         return cell

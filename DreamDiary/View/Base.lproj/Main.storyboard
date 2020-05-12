@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="73"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="72.991071428571431"/>
         </scene>
         <!--登録-->
         <scene sceneID="Wpf-Oa-HKe">
@@ -309,13 +309,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="452" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <containerView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="tKm-ia-hak">
-                            <rect key="frame" x="0.0" y="-42" width="490" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <connections>
-                                <segue destination="URj-sv-n7f" kind="embed" id="Cd5-ZB-DOq"/>
-                            </connections>
-                        </containerView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Uk8-nk-YSg">
                                 <rect key="frame" x="0.0" y="28" width="452" height="43.5"/>
@@ -499,21 +492,6 @@
             <point key="canvasLocation" x="4252" y="1428"/>
         </scene>
         <!--Footer View Controller-->
-        <scene sceneID="hWk-Cm-K6b">
-            <objects>
-                <viewController id="URj-sv-n7f" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TEr-W4-gWM">
-                        <rect key="frame" x="0.0" y="0.0" width="490" height="44"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="MIb-J6-Ctr"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mx7-3w-sx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3309" y="1559"/>
-        </scene>
-        <!--Footer View Controller-->
         <scene sceneID="oGx-Lf-xjE">
             <objects>
                 <viewController id="dDJ-AY-l1W" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -527,6 +505,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Nl-1K-NhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3828" y="2247"/>
+        </scene>
+        <!--Calender View Controller-->
+        <scene sceneID="bev-QC-UnX">
+            <objects>
+                <viewController storyboardIdentifier="calender" id="k3H-zK-gyu" customClass="CalenderViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hVQ-FV-QoU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hTz-cD-ytK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ti-Rg-5dQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3267" y="40"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
