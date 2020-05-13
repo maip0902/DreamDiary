@@ -30,4 +30,12 @@ struct RealmDiaryRepository: DiaryRepository {
             user.diaries.append(diary)
         }
     }
+    
+    func findByDay(date: String) -> Results<Diary>? {
+        let db = DBConnect()
+        let realm = db.connect()
+        let diary = realm.objects(Diary.self).filter("date == '\(date)'")
+        print(diary)
+        return diary.count != 0 ? diary : nil
+    }
 }
