@@ -35,7 +35,6 @@ struct RealmDiaryRepository: DiaryRepository {
         let db = DBConnect()
         let realm = db.connect()
         let diary = realm.objects(Diary.self).filter("date == '\(date)'")
-        print(diary)
         return diary.count != 0 ? diary : nil
     }
 }

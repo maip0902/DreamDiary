@@ -514,15 +514,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSo-A5-klL">
-                                <rect key="frame" x="0.0" y="768" width="414" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="AuH-HY-xRf" kind="embed" id="6kh-Mx-ci8"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vg-2h-xGV">
-                                <rect key="frame" x="0.0" y="643" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="643" width="414" height="253"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="Qwi-kT-k0e" kind="embed" id="nMH-qn-nAX"/>
@@ -534,7 +527,6 @@
                     </view>
                     <connections>
                         <outlet property="diaryListView" destination="9vg-2h-xGV" id="Ce8-7u-Jj3"/>
-                        <outlet property="footer" destination="wSo-A5-klL" id="asJ-Cy-qCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ti-Rg-5dQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -546,11 +538,11 @@
             <objects>
                 <tableViewController id="Qwi-kT-k0e" customClass="DiaryListTableViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5qU-ze-6Hk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZZv-KG-Tyl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ZZv-KG-Tyl">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZZv-KG-Tyl" id="sjv-yE-5j8">
@@ -568,20 +560,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUm-XI-qB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4162" y="-66"/>
-        </scene>
-        <!--Footer View Controller-->
-        <scene sceneID="NX3-5u-jUt">
-            <objects>
-                <viewController id="AuH-HY-xRf" customClass="FooterViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L1V-Ws-Y4q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gb-31-Oc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4064" y="281"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
