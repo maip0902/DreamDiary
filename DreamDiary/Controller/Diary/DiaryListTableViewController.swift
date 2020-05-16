@@ -45,6 +45,18 @@ class DiaryListTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    // tapされた時の処理
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storybord = self.storyboard
+        let nextView = storyboard?.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
+        
+        if let diaries = self.diaries {
+            let diary = diaries[indexPath.row]
+            nextView.diary = diary
+            self.navigationController?.pushViewController(nextView, animated: true)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
