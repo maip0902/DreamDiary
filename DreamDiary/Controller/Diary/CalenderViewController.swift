@@ -10,7 +10,7 @@ import UIKit
 import FSCalendar
 import RealmSwift
 
-class CalenderViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+class CalenderViewController: CommonViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
 
     var loginUser: User?
     @objc fileprivate weak var calendar: FSCalendar!
@@ -25,16 +25,12 @@ class CalenderViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let screenWidth = UIScreen.main.bounds.size.width
-        let screenHeight = UIScreen.main.bounds.size.height
         let calendar = FSCalendar(frame: CGRect(x: screenHeight*0.05, y: screenHeight*0.15, width: screenWidth*0.8, height: screenHeight*0.6))
         calendar.dataSource = self
         calendar.delegate = self
         view.addSubview(calendar)
         self.calendar = calendar
-        // Do any additional setup after loading the view.
         
-        let layout = CustomLayout(screenWidth, screenHeight)
         diaryListView.frame = CGRect(x:0, y:screenHeight*0.75, width:screenWidth, height:screenHeight*0.3)
     }
     

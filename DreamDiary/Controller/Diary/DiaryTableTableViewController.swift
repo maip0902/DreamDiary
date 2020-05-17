@@ -40,9 +40,9 @@ class DiaryTableTableViewController: UITableViewController {
         if let u = self.loginUser {
             let diary = u.diaries[indexPath.row]
             cell.textLabel?.text = diary.date
-            cell.textLabel?.textColor = UIColor.orange
+            cell.textLabel?.textColor = UIColor(red: 255/255.0, green: 128/255.0, blue: 134/255.0, alpha: 1.0)
             cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
-            cell.backgroundColor = UIColor(red: 255/255.0, green: 128/255.0, blue: 134/255.0, alpha: 1.0)
+            cell.backgroundColor = UIColor(red: 255/255.0, green: 214/255.0, blue: 218/255.0, alpha: 1.0)
         }
         
         return cell

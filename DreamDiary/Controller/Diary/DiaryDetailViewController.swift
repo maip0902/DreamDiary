@@ -1,7 +1,7 @@
 
 import UIKit
 
-class DiaryDetailViewController: UIViewController {
+class DiaryDetailViewController: CommonViewController {
 
     var diary: Diary?
     
@@ -9,8 +9,6 @@ class DiaryDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let screenWidth = UIScreen.main.bounds.size.width
-        let screenHeight = UIScreen.main.bounds.size.height
         let layout = CustomLayout(screenWidth, screenHeight)
         layout.setFooter(footer)
         
@@ -27,5 +25,6 @@ class DiaryDetailViewController: UIViewController {
         body.numberOfLines = 0
         body.textColor = UIColor(red: 255/255.0, green: 128/255.0, blue: 134/255.0, alpha: 1.0)
         self.view.addSubview(body)
+        
     }
 }

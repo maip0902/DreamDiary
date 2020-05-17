@@ -2,10 +2,8 @@
 import UIKit
 import RealmSwift
 
-class DiaryViewController: UIViewController {
+class DiaryViewController: CommonViewController {
 
-    
-    
     @IBOutlet weak var body: UITextView!
     
     @IBOutlet weak var imitation: UITextView!
@@ -32,8 +30,6 @@ class DiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let screenWidth = UIScreen.main.bounds.size.width
-        let screenHeight = UIScreen.main.bounds.size.height
         let layout = CustomLayout(screenWidth, screenHeight)
         layout.setFooter(footer)
         
@@ -67,7 +63,6 @@ class DiaryViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ja_JP")
         formatter.dateStyle = .long
-//        formatter.dateFormat = "yyyy年MM月dd日"
 
         date.text = "\(formatter.string(from: datePicker.date))"
 
