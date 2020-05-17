@@ -21,7 +21,7 @@ class DiaryViewController: CommonViewController {
     
     var datePicker: UIDatePicker = UIDatePicker()
     
-    var diary = RealmDiaryRepository()
+    var realmDiary = RealmDiaryRepository()
     
     var loginUser: User?
     
@@ -75,7 +75,7 @@ class DiaryViewController: CommonViewController {
         
         if let u = self.loginUser {
 
-            let createdDiary = diary.create(date: date, body: body, imitation: imitation, user: u)
+            let createdDiary = realmDiary.create(date: date, body: body, imitation: imitation, user: u)
             let storybord = self.storyboard!
             let nextView = storybord.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
             nextView.diary = createdDiary

@@ -44,6 +44,7 @@
 		E709FE69246162AC007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
 		E709FE6A246162AC007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
 		E709FE6E24616562007CE6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE6D24616561007CE6BA /* GoogleService-Info.plist */; };
+		E70CDEB824713B6800F9BED1 /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CDEB724713B6800F9BED1 /* DiaryEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		E709FE622461443C007CE6BA /* DiaryTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableTableViewController.swift; sourceTree = "<group>"; };
 		E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		E709FE6D24616561007CE6BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E70CDEB724713B6800F9BED1 /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 				E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */,
 				E7088A7F246A5707003E6393 /* CalenderViewController.swift */,
 				E7088A81246AF85C003E6393 /* DiaryListTableViewController.swift */,
+				E70CDEB724713B6800F9BED1 /* DiaryEditViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				E7088A6824667159003E6393 /* CustomLayout.swift in Sources */,
 				E7088A82246AF85C003E6393 /* DiaryListTableViewController.swift in Sources */,
 				E709FE6524614D05007CE6BA /* DiaryDetailViewController.swift in Sources */,
+				E70CDEB824713B6800F9BED1 /* DiaryEditViewController.swift in Sources */,
 				E709FE46246016CC007CE6BA /* RegisterViewController.swift in Sources */,
 				E709FE09245FEFED007CE6BA /* AppDelegate.swift in Sources */,
 				E7088A8424710719003E6393 /* CommonViewController.swift in Sources */,

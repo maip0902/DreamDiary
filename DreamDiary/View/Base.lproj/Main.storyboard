@@ -498,6 +498,21 @@
             </objects>
             <point key="canvasLocation" x="3828" y="2247"/>
         </scene>
+        <!--Diary Edit View Controller-->
+        <scene sceneID="A5e-tr-D0l">
+            <objects>
+                <viewController storyboardIdentifier="editDiary" id="CYI-UL-h95" customClass="DiaryEditViewController" customModule="DreamDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tgY-PC-ubk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.83970659889999999" blue="0.85574269859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Y3P-os-RYm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6e-3m-8qj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3318.840579710145" y="2856.6964285714284"/>
+        </scene>
         <!--Calender View Controller-->
         <scene sceneID="bev-QC-UnX">
             <objects>
