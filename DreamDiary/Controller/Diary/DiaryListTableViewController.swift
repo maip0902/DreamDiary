@@ -41,7 +41,7 @@ class DiaryListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         if let diaries = self.diaries {
             let diary = diaries[indexPath.row]
-            cell.textLabel?.text = diary.date
+            cell.textLabel?.text = diary.body
         }
         return cell
     }
