@@ -12,7 +12,10 @@ class DiaryEditViewController: CommonViewController {
 
     var diary: Diary?
     let date = UITextField()
+    let body = UITextView()
+    let imitation = UITextView()
     var datePicker: UIDatePicker = UIDatePicker()
+    let realmDiary = RealmDiaryRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +34,6 @@ class DiaryEditViewController: CommonViewController {
         self.view.addSubview(bodyLabel)
         self.view.addSubview(imitationLabel)
         
-        let body = UITextView()
-        let imitation = UITextView()
         body.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.3, width:screenWidth*0.5, height:screenHeight*0.15)
         imitation.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.5, width:screenWidth*0.5, height:screenHeight*0.1)
         
@@ -48,6 +49,7 @@ class DiaryEditViewController: CommonViewController {
         saveButton.setTitle("保存", for: UIControl.State.normal)
         layout.centeringWidth(saveButton, 0.7, 0.5, 0.1)
         layout.setOutlet(saveButton, radius: 0.1, borderWidth: 2, color: UIColor(red: 255, green: 128, blue: 134, alpha: 1.0).cgColor)
+        saveButton.addTarget(self, action: #selector(save), for: UIControl.Event.touchUpInside)
         self.view.addSubview(saveButton)
         
         // datePicker
@@ -61,7 +63,8 @@ class DiaryEditViewController: CommonViewController {
         date.inputView = datePicker
         date.inputAccessoryView = toolbar
         date.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.2, width:screenWidth*0.5, height:screenHeight*0.05)
-        // Do any additional setup after loading the view.
+        date.backgroundColor = UIColor.white
+        self.view.addSubview(date)
     }
     
     @objc func done() {
@@ -71,7 +74,10 @@ class DiaryEditViewController: CommonViewController {
            formatter.locale = Locale(identifier: "ja_JP")
            formatter.dateStyle = .long
            date.text = "\(formatter.string(from: datePicker.date))"
-
+    }
+    
+    @objc func save() {
+        realmDiary.update(date: date.text!, body: body.text, imitation: imitation.text, diary: diary!)
     }
        
 }

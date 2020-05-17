@@ -16,6 +16,16 @@ struct RealmDiaryRepository: DiaryRepository {
         return diary
     }
     
+    func update(date: String, body: String, imitation: String, diary: Diary) {
+        let db = DBConnect()
+        let realm = db.connect()
+        try! realm.write {
+            diary.date = date
+            diary.body = body
+            diary.imitation = imitation
+        }
+    }
+    
     func findByDiaryId(diaryId: String) -> Diary? {
         let db = DBConnect()
         let realm = db.connect()
