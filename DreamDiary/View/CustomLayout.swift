@@ -75,6 +75,12 @@ struct CustomLayout {
         uiContent.layer.borderColor = color
     }
     
+    func setLabel(_ uiContent: UILabel, radius: CGFloat, borderWidth: CGFloat, color: CGColor) {
+        uiContent.layer.cornerRadius = uiContent.frame.size.width * radius
+        uiContent.layer.borderWidth = borderWidth
+        uiContent.layer.borderColor = color
+    }
+    
     func centeringWidth(_ uiContent: UIControl, _ yPosition: CGFloat, _ contetWidth: CGFloat, _ contentHeight: CGFloat) {
         uiContent.frame = CGRect(x:(screenWidth - screenWidth*contetWidth)/2, y:screenHeight*yPosition, width: screenWidth*contetWidth, height:screenHeight*contentHeight)
     }

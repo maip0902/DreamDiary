@@ -341,13 +341,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="452" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-N9-5LR">
-                                <rect key="frame" x="83" y="205" width="254" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpM-bG-7zN">
                                 <rect key="frame" x="0.0" y="626" width="452" height="128"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -361,7 +354,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="k5O-cJ-nep"/>
                     <connections>
-                        <outlet property="dateLabel" destination="YUW-N9-5LR" id="UoJ-CY-VTz"/>
                         <outlet property="footer" destination="gpM-bG-7zN" id="CT9-Jd-3IN"/>
                     </connections>
                 </viewController>

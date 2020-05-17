@@ -29,9 +29,9 @@ class FooterViewController: UIViewController {
         
         calenderButton.setTitle("カレンダー", for: .normal)
         // 位置
-        layout.setPositionByRatio(0.25, 0.01, 0.25, 0.1, uiContent: listButton)
-        layout.setPositionByRatio(0.5, 0.01, 0.25, 0.1, uiContent: createButton)
-        layout.setPositionByRatio(0.7, 0.01, 0.25, 0.1, uiContent: calenderButton)
+        layout.setPositionByRatio(0.07, 0.01, 0.25, 0.1, uiContent: listButton)
+        layout.setPositionByRatio(0.37, 0.01, 0.25, 0.1, uiContent: createButton)
+        layout.setPositionByRatio(0.67, 0.01, 0.25, 0.1, uiContent: calenderButton)
         
         listButton.setTitleColor(UIColor(red: 255/255.0, green: 128/255.0, blue: 134/255.0, alpha: 1.0), for: .normal)
         createButton.setTitleColor(UIColor(red: 255/255.0, green: 128/255.0, blue: 134/255.0, alpha: 1.0), for: .normal)

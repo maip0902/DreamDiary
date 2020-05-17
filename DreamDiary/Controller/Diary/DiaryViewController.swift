@@ -65,7 +65,9 @@ class DiaryViewController: UIViewController {
 
         // 日付のフォーマット
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy年MM月dd日"
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.dateStyle = .long
+//        formatter.dateFormat = "yyyy年MM月dd日"
 
         date.text = "\(formatter.string(from: datePicker.date))"
 
@@ -79,7 +81,10 @@ class DiaryViewController: UIViewController {
         if let u = self.loginUser {
 
             let createdDiary = diary.create(date: date, body: body, imitation: imitation, user: u)
-            
+            let storybord = self.storyboard!
+            let nextView = storybord.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
+            nextView.diary = createdDiary
+            self.navigationController?.pushViewController(nextView, animated: true)
         }
         
     }

@@ -45,7 +45,7 @@ class CalenderViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         let month = tmpDate.component(.month, from: date)
         let day = tmpDate.component(.day, from: date)
         
-        var date = year.description + "年0" + month.description + "月" + day.description + "日"
+        var date = year.description + "年" + month.description + "月" + day.description + "日"
         
         if let diary = diary.findByDay(date: date) {
             self.dayDiary = diary
@@ -62,7 +62,7 @@ class CalenderViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         let month = tmpDate.component(.month, from: date)
         let day = tmpDate.component(.day, from: date)
         
-        var date = year.description + "年0" + month.description + "月" + day.description + "日"
+        var date = year.description + "年" + month.description + "月" + day.description + "日"
         
         if let diary = diary.findByDay(date: date) {
             self.dayDiary = diary
