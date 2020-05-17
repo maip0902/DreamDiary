@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 戻るボタンつけない
+        self.navigationItem.hidesBackButton = true
+        
         let screenWidth = UIScreen.main.bounds.size.width
         let screenHeight = UIScreen.main.bounds.size.height
         let layout = CustomLayout(screenWidth, screenHeight)

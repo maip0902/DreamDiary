@@ -11,17 +11,12 @@ class DiaryTableTableViewController: UITableViewController {
         let screenWidth = UIScreen.main.bounds.size.width
         let screenHeight = UIScreen.main.bounds.size.height
         let layout = CustomLayout(screenWidth, screenHeight)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
@@ -47,7 +42,7 @@ class DiaryTableTableViewController: UITableViewController {
             cell.textLabel?.text = diary.date
             cell.textLabel?.textColor = UIColor.orange
             cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
-            cell.backgroundColor = UIColor(red: 255/255.0, green: 214/255.0, blue: 218/255.0, alpha: 1.0)
+            cell.backgroundColor = UIColor(red: 255/255.0, green: 128/255.0, blue: 134/255.0, alpha: 1.0)
         }
         
         return cell

@@ -12,6 +12,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // ログイン後画面には戻るつけない
+        self.navigationItem.hidesBackButton = true
+        var logoutBarButton: UIBarButtonItem = UIBarButtonItem(title: "ログアウト", style: .done, target: self, action: #selector(logout))
+        self.navigationItem.rightBarButtonItem = logoutBarButton
         let screenWidth = UIScreen.main.bounds.size.width
         let screenHeight = UIScreen.main.bounds.size.height
         let layout = CustomLayout(screenWidth, screenHeight)
@@ -27,6 +31,17 @@ class MainViewController: UIViewController {
                 loginLabel.textColor = UIColor(red: 255/255.0, green: 128/255.0, blue: 134/255.0, alpha: 1.0)
             }
         }
-        // Do any additional setup after loading the view.
+    }
+    
+    @objc func logout() {
+        do {
+            try Auth.auth().signOut()
+            let storybord = self.storyboard!
+            let nextView = storybord.instantiateViewController(identifier: "top") as! ViewController
+            self.navigationController?.pushViewController(nextView, animated: true)
+        } catch let signOutError as NSError {
+            print(signOutError)
+        }
+        
     }
 }
