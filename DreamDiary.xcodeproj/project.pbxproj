@@ -43,8 +43,8 @@
 		E709FE68246162AB007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
 		E709FE69246162AC007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
 		E709FE6A246162AC007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
-		E709FE6E24616562007CE6BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE6D24616561007CE6BA /* GoogleService-Info.plist */; };
 		E70CDEB824713B6800F9BED1 /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CDEB724713B6800F9BED1 /* DiaryEditViewController.swift */; };
+		E7A2038B247426CE006C3411 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7A2038A247426BE006C3411 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +112,8 @@
 		E709FE6424614D05007CE6BA /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		E709FE6D24616561007CE6BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E70CDEB724713B6800F9BED1 /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
+		E7A20389247419AD006C3411 /* DreamDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DreamDiary.entitlements; sourceTree = "<group>"; };
+		E7A2038A247426BE006C3411 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		E709FDFC245FEFED007CE6BA = {
 			isa = PBXGroup;
 			children = (
+				E7A2038A247426BE006C3411 /* GoogleService-Info.plist */,
 				E709FE07245FEFED007CE6BA /* DreamDiary */,
 				E709FE1E245FEFEF007CE6BA /* DreamDiaryTests */,
 				E709FE29245FEFEF007CE6BA /* DreamDiaryUITests */,
@@ -190,6 +193,7 @@
 		E709FE07245FEFED007CE6BA /* DreamDiary */ = {
 			isa = PBXGroup;
 			children = (
+				E7A20389247419AD006C3411 /* DreamDiary.entitlements */,
 				E709FE6D24616561007CE6BA /* GoogleService-Info.plist */,
 				E709FE4D246064C7007CE6BA /* Repository */,
 				E709FE08245FEFED007CE6BA /* AppDelegate.swift */,
@@ -416,12 +420,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A2038B247426CE006C3411 /* GoogleService-Info.plist in Resources */,
 				E709FE15245FEFEE007CE6BA /* LaunchScreen.storyboard in Resources */,
 				E709FE12245FEFEE007CE6BA /* Assets.xcassets in Resources */,
 				E709FE10245FEFED007CE6BA /* Main.storyboard in Resources */,
 				E7088A7A24684060003E6393 /* icon.png in Resources */,
 				E709FE68246162AB007CE6BA /* Info.plist in Resources */,
-				E709FE6E24616562007CE6BA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +753,7 @@
 			baseConfigurationReference = 40B963EA79AFF1ECA4A33E72 /* Pods-DreamDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DreamDiary/DreamDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2WRL3AW2Z2;
 				INFOPLIST_FILE = DreamDiary/Info.plist;
@@ -768,6 +773,7 @@
 			baseConfigurationReference = D6A14A26315D36FD1C169DF2 /* Pods-DreamDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DreamDiary/DreamDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2WRL3AW2Z2;
 				INFOPLIST_FILE = DreamDiary/Info.plist;

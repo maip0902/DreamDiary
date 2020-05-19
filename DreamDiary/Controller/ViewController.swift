@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let realm = try! Realm()
+        
         // 戻るボタンつけない
         self.navigationItem.hidesBackButton = true
         

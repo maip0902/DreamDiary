@@ -19,6 +19,7 @@ class MainViewController: CommonViewController {
         layout.setFooter(footer)
         
         if let firebaseUser = Auth.auth().currentUser {
+            
             if let u = user.findByLoginId(loginId: firebaseUser.uid) {
                 self.loginUser = u
                 let displayName = u.name
