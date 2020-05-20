@@ -13,7 +13,6 @@
 		E7088A662463111D003E6393 /* passwordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A652463111D003E6393 /* passwordResetViewController.swift */; };
 		E7088A6824667159003E6393 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A6724667159003E6393 /* CustomLayout.swift */; };
 		E7088A722467C479003E6393 /* FooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A712467C479003E6393 /* FooterViewController.swift */; };
-		E7088A7A24684060003E6393 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7088A7924684060003E6393 /* icon.png */; };
 		E7088A80246A5707003E6393 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A7F246A5707003E6393 /* CalenderViewController.swift */; };
 		E7088A82246AF85C003E6393 /* DiaryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A81246AF85C003E6393 /* DiaryListTableViewController.swift */; };
 		E7088A8424710719003E6393 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7088A8324710719003E6393 /* CommonViewController.swift */; };
@@ -45,6 +44,7 @@
 		E709FE6A246162AC007CE6BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E709FE16245FEFEE007CE6BA /* Info.plist */; };
 		E70CDEB824713B6800F9BED1 /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CDEB724713B6800F9BED1 /* DiaryEditViewController.swift */; };
 		E7A2038B247426CE006C3411 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7A2038A247426BE006C3411 /* GoogleService-Info.plist */; };
+		E7A203D124757C0B006C3411 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A203D024757C0B006C3411 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +114,7 @@
 		E70CDEB724713B6800F9BED1 /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
 		E7A20389247419AD006C3411 /* DreamDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DreamDiary.entitlements; sourceTree = "<group>"; };
 		E7A2038A247426BE006C3411 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7A203D024757C0B006C3411 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 		E709FDFC245FEFED007CE6BA = {
 			isa = PBXGroup;
 			children = (
+				E7A203D024757C0B006C3411 /* icon.png */,
 				E7A2038A247426BE006C3411 /* GoogleService-Info.plist */,
 				E709FE07245FEFED007CE6BA /* DreamDiary */,
 				E709FE1E245FEFEF007CE6BA /* DreamDiaryTests */,
@@ -420,11 +422,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A203D124757C0B006C3411 /* icon.png in Resources */,
 				E7A2038B247426CE006C3411 /* GoogleService-Info.plist in Resources */,
 				E709FE15245FEFEE007CE6BA /* LaunchScreen.storyboard in Resources */,
 				E709FE12245FEFEE007CE6BA /* Assets.xcassets in Resources */,
 				E709FE10245FEFED007CE6BA /* Main.storyboard in Resources */,
-				E7088A7A24684060003E6393 /* icon.png in Resources */,
 				E709FE68246162AB007CE6BA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
