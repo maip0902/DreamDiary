@@ -10,6 +10,8 @@ class DiaryDetailViewController: CommonViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 戻るボタンつけない
+        self.navigationItem.hidesBackButton = true
         let layout = CustomLayout(screenWidth, screenHeight)
         layout.setFooter(footer)
         

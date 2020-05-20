@@ -25,6 +25,8 @@ class DiaryViewController: CommonViewController {
     
     var loginUser: User?
     
+    let errorMessage = UILabel()
+    
     @IBOutlet weak var footer: UIView!
     
     override func viewDidLoad() {
@@ -42,6 +44,8 @@ class DiaryViewController: CommonViewController {
         layout.centeringWidth(createButton, 0.7, 0.5, 0.1)
         layout.setOutlet(createButton, radius: 0.1, borderWidth: 2, color: UIColor(red: 255, green: 128, blue: 134, alpha: 1.0).cgColor)
         
+        layout.setLabelPositionByRatio(0.1, 0.6, 0.8, 0.1, uiContent: errorMessage)
+        self.view.addSubview(errorMessage)
         // datePicker
         datePicker.datePickerMode = UIDatePicker.Mode.date
         date.inputView = datePicker
@@ -69,17 +73,24 @@ class DiaryViewController: CommonViewController {
     }
     
     @IBAction func create(_ sender: Any) {
+        self.errorMessage.text = ""
         let body = self.body.text ?? ""
         let imitation = self.imitation.text ?? ""
         let date = self.date.text ?? ""
         
         if let u = self.loginUser {
-
-            let createdDiary = realmDiary.create(date: date, body: body, imitation: imitation, user: u)
-            let storybord = self.storyboard!
-            let nextView = storybord.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
-            nextView.diary = createdDiary
-            self.navigationController?.pushViewController(nextView, animated: true)
+            // bodyのバリデーション
+            if(self.body.text.count >= 200) {
+                self.errorMessage.text = "200文字までしか入力できません"
+                errorMessage.textColor = UIColor.red
+            } else {
+                let createdDiary = realmDiary.create(date: date, body: body, imitation: imitation, user: u)
+                let storybord = self.storyboard!
+                let nextView = storybord.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
+                nextView.diary = createdDiary
+                self.navigationController?.pushViewController(nextView, animated: true)
+            }
+            
         }
         
     }

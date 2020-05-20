@@ -83,8 +83,8 @@ class DiaryEditViewController: CommonViewController {
     @objc func save() {
         self.errorMessage.text = ""
         // bodyのバリデーション
-        if(body.text.count >= 300) {
-            self.errorMessage.text = "300文字までしか入力できません"
+        if(body.text.count >= 200) {
+            self.errorMessage.text = "200文字までしか入力できません"
             errorMessage.textColor = UIColor.red
         } else {
             let updatedDiary = realmDiary.update(date: date.text!, body: body.text, imitation: imitation.text, diary: diary!)
