@@ -16,6 +16,7 @@ class DiaryEditViewController: CommonViewController {
     let imitation = UITextView()
     var datePicker: UIDatePicker = UIDatePicker()
     let realmDiary = RealmDiaryRepository()
+    let errorMessage = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +31,11 @@ class DiaryEditViewController: CommonViewController {
         
         layout.spaceBetweenHeightLabel(uiContents: [dateLabel, bodyLabel], space: 0.2, 0.1, 0.2, 0.5, 0.05)
         layout.setLabelPositionByRatio(0.1, 0.5, 0.3, 0.05, uiContent: imitationLabel)
+        layout.setLabelPositionByRatio(0.1, 0.6, 0.8, 0.1, uiContent: errorMessage)
         self.view.addSubview(dateLabel)
         self.view.addSubview(bodyLabel)
         self.view.addSubview(imitationLabel)
+        self.view.addSubview(errorMessage)
         
         body.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.3, width:screenWidth*0.5, height:screenHeight*0.15)
         imitation.frame = CGRect(x: screenWidth*0.35, y:screenHeight*0.5, width:screenWidth*0.5, height:screenHeight*0.1)
@@ -41,6 +44,7 @@ class DiaryEditViewController: CommonViewController {
         self.view.addSubview(imitation)
         
         if let diaryItem = diary {
+            date.text = diaryItem.date
             body.text = diaryItem.body
             imitation.text = diaryItem.imitation
         }
@@ -77,11 +81,18 @@ class DiaryEditViewController: CommonViewController {
     }
     
     @objc func save() {
-        let updatedDiary = realmDiary.update(date: date.text!, body: body.text, imitation: imitation.text, diary: diary!)
-        let storyboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
-        nextView.diary = updatedDiary
-        self.navigationController?.pushViewController(nextView, animated: true)
+        self.errorMessage.text = ""
+        // bodyのバリデーション
+        if(body.text.count >= 300) {
+            self.errorMessage.text = "300文字までしか入力できません"
+            errorMessage.textColor = UIColor.red
+        } else {
+            let updatedDiary = realmDiary.update(date: date.text!, body: body.text, imitation: imitation.text, diary: diary!)
+            let storyboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
+            nextView.diary = updatedDiary
+            self.navigationController?.pushViewController(nextView, animated: true)
+        }
     }
        
 }
