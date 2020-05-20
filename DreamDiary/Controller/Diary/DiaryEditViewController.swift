@@ -47,7 +47,7 @@ class DiaryEditViewController: CommonViewController {
         
         let saveButton = UIButton()
         saveButton.setTitle("保存", for: UIControl.State.normal)
-        layout.centeringWidth(saveButton, 0.7, 0.5, 0.1)
+        layout.centeringWidth(saveButton, 0.7, 0.6, 0.1)
         layout.setOutlet(saveButton, radius: 0.1, borderWidth: 2, color: UIColor(red: 255, green: 128, blue: 134, alpha: 1.0).cgColor)
         saveButton.addTarget(self, action: #selector(save), for: UIControl.Event.touchUpInside)
         self.view.addSubview(saveButton)
@@ -77,7 +77,11 @@ class DiaryEditViewController: CommonViewController {
     }
     
     @objc func save() {
-        realmDiary.update(date: date.text!, body: body.text, imitation: imitation.text, diary: diary!)
+        let updatedDiary = realmDiary.update(date: date.text!, body: body.text, imitation: imitation.text, diary: diary!)
+        let storyboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(identifier: "diaryDetail") as! DiaryDetailViewController
+        nextView.diary = updatedDiary
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
        
 }

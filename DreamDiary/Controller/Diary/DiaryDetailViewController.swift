@@ -29,7 +29,7 @@ class DiaryDetailViewController: CommonViewController {
         
         let editButton = UIButton()
         editButton.setTitle("編集", for: UIControl.State.normal)
-        layout.setPositionByRatio(0.2, 0.7, 0.4, 0.1, uiContent: editButton)
+        layout.setPositionByRatio(0.6, 0.7, 0.28, 0.15, uiContent: editButton)
         layout.setOutlet(editButton, radius: 0.5, borderWidth: 2, color: UIColor.white.cgColor)
         editButton.addTarget(self, action: #selector(edit), for: UIControl.Event.touchUpInside)
         self.view.addSubview(editButton)
