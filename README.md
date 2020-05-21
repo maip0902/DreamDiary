@@ -2,10 +2,10 @@
 夢日記をつけるアプリ
 
 # 開発環境
-XCode 11.3
-Swift 5.0
-RealmSwift 4.4.1
-Firebase 
+- XCode 11.3
+- Swift 5.0
+- RealmSwift 4.4.1
+- Firebase 
 
 # 導入手順
 
